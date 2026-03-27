@@ -1,6 +1,6 @@
 <div class="header-cart">
   <a href='#' class='header-cart__link'>
-    <?php echo get_inline_svg('cart-icon'); ?>
+    <?php echo get_inline_svg('bag'); ?>
     <span class="header-cart__count">
       <?php echo WC()->cart->get_cart_contents_count(); ?>
     </span>

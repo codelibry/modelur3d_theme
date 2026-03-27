@@ -13,20 +13,12 @@
     <!-- Woocommerce Links -->
     <div class="header__woo-links | cluster">
 
-      <!-- Currency Switcher -->
-      <?php get_template_part('template-parts/header/currency-switcher') ?>
-
-      <!-- Search -->
-      <?php get_template_part('template-parts/header/search') ?>
+      <!-- Cart -->
+      <?php get_template_part('template-parts/header/cart') ?>
 
       <!-- My Account -->
       <?php get_template_part('template-parts/header/login') ?>
 
-      <!-- Wishlist -->
-      <?php get_template_part('template-parts/header/wishlist') ?>
-
-      <!-- Cart -->
-      <?php get_template_part('template-parts/header/cart') ?>
 
     </div>
 

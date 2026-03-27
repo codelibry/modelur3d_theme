@@ -50,7 +50,7 @@ input[type="submit"] {
 .button.button--secondary {
   @include button;
 
-  --button-bg: rgba(255, 255, 255, 0.8);
-  --button-text: var(--color-dark);
+  --button-bg: var(--color-black);
+  --button-text: var(--color-white);
   --focus-color: var(--color-dark);
 }

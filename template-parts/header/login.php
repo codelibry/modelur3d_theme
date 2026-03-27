@@ -14,9 +14,8 @@ $display_popup = get('header__login-popup', $options = true);
         <span class="visually-hidden"><?php esc_html_e('My account', 'codelibry') ?></span>
       </a>
     <?php else: ?>
-      <a href="#popup-login-form">
-        <?php echo get_inline_svg('account-icon') ?>
-        <span class="visually-hidden"><?php esc_html_e('Sign in', 'codelibry') ?></span>
+      <a class="button" href="#popup-login-form">
+        <?php esc_html_e('Sign Up', 'codelibry') ?>
       </a>
     <?php endif; ?>
 

@@ -33,7 +33,15 @@ module.exports = {
                         loader: 'css-loader',
                         options: { url: false }
                     },
-                    'sass-loader'
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            additionalData: `@use 'src/scss/utilities/rem-converter' as *;`,
+                            sassOptions: {
+                                includePaths: [path.resolve(__dirname)],
+                            }
+                        }
+                    }
                 ]
             },
 

@@ -3,30 +3,34 @@
 
   box-shadow: var(--shadow-base);
   padding: var(--header-spacing) 0;
-  background: var(--color-light);
-  color: var(--color-dark);
+  background: var(--color-bg);
+  color: var(--color-black);
+  position: fixed;
+  top: -1px;
+  width: 100%;
 
   .menu {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: rem(10);
 
     a[aria-current="page"],
     a:hover{
-      background-color: var(--color-primary);
+      background-color: var(--color-black);
       color: var(--color-white);
     }
 
     a{
       display: block;
-      width: 100%;
-      padding: 0.75rem 1.25rem;
+      width: max-content;
+      padding: rem(15) rem(20);
 
       font-weight: var(--font-bold);
       font-size: var(--size-sm);
       text-transform: uppercase;
       text-decoration: none;
       line-height: 1;
+      background: var(--color-white);
     }
 
     .menu-item-has-children {
