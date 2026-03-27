@@ -5,6 +5,7 @@ import TestimSlider from './js/testimonials.js';
 import './js/header-submenu';
 import './js/reset-pass';
 import './js/password-toggle';
+import './js/product-tab';
 import './scss/main.scss';
 
 /*

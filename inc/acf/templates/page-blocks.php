@@ -32,6 +32,18 @@ add_action('acf/init', function () {
                         'sub_fields' => codelibry_acf_fields_banner(),
                     ],
                     [
+                        'name'       => 'users',
+                        'label'      => 'Users block',
+                        'display'    => 'block',
+                        'sub_fields' => codelibry_acf_fields_users(),
+                    ],
+                    [
+                        'name'       => 'product-tab',
+                        'label'      => 'Products tab',
+                        'display'    => 'block',
+                        'sub_fields' => codelibry_acf_fields_product_tab(),
+                    ],
+                    [
                         'name'       => 'reusable-block',
                         'label'      => 'Reusable Block',
                         'display'    => 'block',

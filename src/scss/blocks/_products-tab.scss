@@ -1,0 +1,38 @@
+.product-tab {
+    &__panel {
+        display: none;
+         
+
+        &.is-active {
+            display: block;
+        }
+
+        .products {
+            row-gap: rem(80);
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: rem(40);
+        gap: 1rem;
+    }
+    
+}
+
+.tabs {
+    display: flex;
+    gap: rem(10);
+    flex-wrap: wrap;
+
+    &__btn {
+        
+
+        &.is-active {
+            background: var(--color-black);
+            color: var(--color-white);
+        }
+    }
+}

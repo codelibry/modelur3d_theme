@@ -8,26 +8,57 @@
    * Spacings
    */
   & > * {
-    margin-bottom: 1rem;
+    margin-bottom: rem(20);
   }
 
   &__title {
-    margin-bottom: 0.5rem;
+    margin-bottom: rem(40);
 
     // restrict title lines count
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
+
+    a{
+      font-size: var(--size-md);
+      font-weight: var(--font-bold);
+      text-decoration: none;
+    }
   }
 
   /*
    * Product Image
    */
-	&__image-box {
+	&__thumbnail {
 		aspect-ratio: 5 / 6;
 		overflow: hidden;
 		width: 100%;
+    margin-bottom: rem(40);
+    position: relative;
+
+    .product-card__icon-link {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      
+      rect, path, svg {
+        transition: var(--transition-base);
+      }
+
+      &:hover {
+
+        rect {
+          fill: var(--color-black) !important;
+        }
+
+        path {
+          stroke: var(--color-white) !important;
+        }
+      }
+    }
 	}
 
 	img {
@@ -39,46 +70,33 @@
 	}
 
   /*
+   * Attributes
+   */
+
+  &__attr {
+    font-size: var(--size-sm);
+    color: var(--color-dark);
+  }
+
+  /*
    * Add to Cart button
    */
   .add_to_cart_button {
-    margin-top: auto;
     margin-bottom: 0;
   }
 
   /*
-   * Add to Wishlist icon
+   * Footer
    */
-	&__wishlist {
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: 2;
+	
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    .yith-add-to-wishlist-button-block {
-      all: unset;
-    }
-
-    .yith-wcwl-add-to-wishlist-button__label {
+    br {
       display: none;
     }
-
-    .yith-wcwl-add-to-wishlist-button {
-      @include reset-button;
-      transition: var(--transition-base);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
-
-    .yith-wcwl-add-to-wishlist-button:hover {
-      opacity: 0.5;
-    }
-
-    svg, img {
-      width: 3rem;
-      height: 3rem;
-    }
-	}
+  }
+  
 }

@@ -214,7 +214,7 @@ add_action( 'template_redirect', function() {
 
             if($display_popup):
 
-            wp_safe_redirect( home_url( '/?popup=login' ) );
+            wp_safe_redirect( home_url( '/#popup-login-form' ) );
             exit;
 
             else:

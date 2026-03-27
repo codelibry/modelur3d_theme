@@ -1,14 +1,15 @@
 .banner {
-    .container {
+    &__wrapper {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: rem(148) rem(86);
-        min-height: rem(600);
+        padding: 0 rem(86);
+        min-height: rem(640);
+        padding-top: rem(148) !important;
     }
 
     &__content {
-        max-width: 47%;
+        max-width: 48%;
         color: var(--color-white);
         display: flex;
         flex-direction: column;
@@ -32,14 +33,14 @@
             max-width: 70%;
         }
 
-        .container {
+        &__wrapper {
             padding: rem(80) rem(40);
             min-height: 100%;
         }
     }
 
     @include sm {
-        .container {
+        &__wrapper {
             padding: rem(24);
         }
     }
