@@ -1,0 +1,47 @@
+.banner {
+    .container {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: rem(148) rem(86);
+        min-height: rem(600);
+    }
+
+    &__content {
+        max-width: 47%;
+        color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        gap: rem(40);
+    }
+
+    &__text {
+        max-width: 55%;
+    }
+
+    .button {
+        width: fit-content;
+    }
+
+    @include lg {
+        &__content {
+            max-width: 85%;
+        }
+
+        &__text {
+            max-width: 70%;
+        }
+
+        .container {
+            padding: rem(80) rem(40);
+            min-height: 100%;
+        }
+    }
+
+    @include sm {
+        .container {
+            padding: rem(24);
+        }
+    }
+
+}

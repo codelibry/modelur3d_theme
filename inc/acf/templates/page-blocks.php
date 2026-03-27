@@ -26,6 +26,12 @@ add_action('acf/init', function () {
                         'sub_fields' => codelibry_acf_fields_testimonials(),
                     ],
                     [
+                        'name'       => 'banner',
+                        'label'      => 'Banner',
+                        'display'    => 'block',
+                        'sub_fields' => codelibry_acf_fields_banner(),
+                    ],
+                    [
                         'name'       => 'reusable-block',
                         'label'      => 'Reusable Block',
                         'display'    => 'block',

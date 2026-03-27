@@ -3,7 +3,7 @@
   border-radius: 0;
   background-color: var(--color-light);
 
-  @include sm {
+  @include md {
     padding: 1.25rem;
   }
 }
