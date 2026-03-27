@@ -29,7 +29,7 @@ $menus = array_map(function($menu_id, $location) {
 
 <footer class="footer" id="footer">
 	<div class="container">
-    <div class="footer__inner | flow">
+    <div class="footer__inner | flow box">
       <div class="footer__main | repel">
         <div class="footer__info | flow">
           <a href="<?php echo home_url() ?>" class="footer__logo">
@@ -47,19 +47,13 @@ $menus = array_map(function($menu_id, $location) {
         <div class="footer__menu-wrapper | cluster">
           <?php foreach ($menus as $menu): ?>
             <div class="footer__column | flow">
-              <h4 class="h5">
+              <h4>
                 <?php echo $menu['title'] ?>
               </h4>
               <?php echo $menu['menu'] ?>
             </div>
           <?php endforeach; ?>
         </div>
-      </div>
-
-      <div class="footer__bottom | repel">
-        <p class="footer__copyright">
-          <?php echo date('Y') ?> © <?php echo $footer_company_name ?>
-        </p>
 
         <div class="cluster">
           <?php if(shortcode_exists('woocs')): ?>
@@ -70,7 +64,7 @@ $menus = array_map(function($menu_id, $location) {
           
           <div class="footer__payments">
             <?php if($footer_payment_methods): ?>
-              <?php echo wp_get_attachment_image($footer_payment_methods, 'thumbnail', false, [
+              <?php echo wp_get_attachment_image($footer_payment_methods, false, [
                 'loading' => 'lazy'
               ]) ?>
             <?php else: ?>
@@ -78,6 +72,13 @@ $menus = array_map(function($menu_id, $location) {
             <?php endif; ?>
           </div>
         </div>
+      </div>
+
+      <div class="footer__bottom | repel">
+        <p class="footer__copyright">
+          <?php echo date('Y') ?> © <?php echo $footer_company_name ?>
+        </p>
+
     </div>
 	</div>
 </footer>

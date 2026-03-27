@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="header__inner | container-lg">
+  <div class="header__inner | container">
 
     <!-- Mobile Menu -->
     <?php get_template_part('template-parts/header/mobile-menu') ?>

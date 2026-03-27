@@ -1,14 +1,17 @@
 .footer {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  padding: 2.5rem 0;
+  color: var(--color-dark);
 
   &__inner {
     --flow-space: 2rem;
   }
 
   &__main {
-    gap: 2rem;
+    gap: rem(20);
+    flex-wrap: nowrap;
+
+    .cluster {
+      margin-bottom: auto;
+    }
   }
 
   &__logo {
@@ -22,23 +25,35 @@
   }
 
   &__info {
-    max-width: 15rem;
+    max-width: rem(310);
+    font-size: var(--size-sm);
+    font-weight: var(--font-medium);
   }
 
   &__menu-wrapper {
     align-items: flex-start;
-    column-gap: 4rem;
+    column-gap: 1rem;
     row-gap: 2rem;
+
+    h4 {
+      font-size: var(--size-md);
+      color: var(--color-black);
+    }
   }
 
   .menu {
     a[aria-current="page"] {
-      color: var(--color-primary);
+      color: var(--color-black);
+    }
+
+    a {
+      font-weight: var(--font-extra-bold);
+      font-size: var(--size-sm);
     }
   }
 
   &__column {
-    --flow-space: 0.75rem;
+    --flow-space: 40px;
   }
 
   &__payments {
@@ -53,5 +68,23 @@
     --currency-switcher-border: 1px solid var(--color-white);
     --currency-switcher-color: var(--color-white);
     --currency-switcher-bg: var(--color-dark);
+  }
+
+  .cluster {
+    flex-wrap: nowrap;
+  }
+
+  @include lg {
+    &__main {
+      flex-wrap: wrap;
+    }
+
+    .cluster {
+      flex-wrap: wrap;
+    }
+
+    &__column {
+      --flow-space: 20px;
+    }
   }
 }
