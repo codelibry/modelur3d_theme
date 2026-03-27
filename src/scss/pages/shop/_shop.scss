@@ -1,0 +1,17 @@
+.woocommerce-shop {
+  .shop-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    gap: 2rem;
+  }
+
+	.shop-top-bar {
+		margin-bottom: 2rem;
+	}
+
+  @include lg {
+    .shop-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.woocommerce-orders {
+  /*
+   * Orders tab styles
+   */
+
+  .myaccount-content-column {
+    overflow: auto;
+  }
+
+  table {
+    min-width: 100%;
+    width: max-content;
+  }
+
+  th, td {
+    padding: 0.5rem 1rem;
+    text-align: left;
+  }
+
+  tr th:first-child,
+  tr td:first-child {
+    padding-left: 0;
+  }
+
+  [data-title="Actions"] {
+    @include cluster;
+    gap: 0.5rem;
+  }
+}

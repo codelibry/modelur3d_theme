@@ -1,0 +1,16 @@
+.woocommerce-form-login{
+
+    & > .lost_password{
+        display: none;
+    }
+
+    & > .form-row{
+        .woocommerce-form-login__rememberme{
+            display: none;
+        }
+    }
+}
+
+.woocommerce-form-login__submit{
+    width: 100%;
+}

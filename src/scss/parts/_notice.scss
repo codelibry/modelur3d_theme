@@ -1,0 +1,19 @@
+/*
+ * General Notices Styles
+ */
+
+.woocommerce-notices-wrapper:has(*) {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.woocommerce-NoticeGroup {
+  color: var(--color-error);
+}

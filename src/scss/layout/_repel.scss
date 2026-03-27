@@ -1,0 +1,21 @@
+/*
+ * Repel Layout
+ *
+ * https://codepen.io/Roma13012003/pen/dPyJwpx
+ */
+
+.repel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap, 1rem);
+}
+
+@mixin repel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap, 1rem);
+}

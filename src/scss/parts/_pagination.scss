@@ -1,0 +1,28 @@
+ul.page-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+
+  & > li {
+    a,
+    span {
+      width: 40px; /*add_variable*/
+      height: 40px; /*add_variable*/
+      font-size: 1rem; /*add_variable*/
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: var(--radius-md);
+      color: var(--color-nav-link); /*add_variable*/
+    }
+
+    .current,
+    a:hover {
+      color: var(--color-neutral-100);  /*add_variable*/
+    }
+  }
+}

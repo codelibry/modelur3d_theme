@@ -1,0 +1,12 @@
+.products-slider {
+  --flow-space: 2rem;
+
+  .navigation-button svg {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .navigation-button.next {
+    transform: rotate(180deg);
+  }
+}

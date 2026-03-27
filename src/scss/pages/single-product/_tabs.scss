@@ -1,0 +1,48 @@
+/*
+ * Single Product Tabs
+ */
+.single-product .woocommerce-tabs {
+
+  /*
+   * Tabs Navigation
+   */
+  .tabs {
+    @include cluster;
+  
+    a {
+      display: block;
+      text-decoration: none;
+      border-bottom: var(--stroke-transparent);
+      font-size: var(--size-h6);
+      color: var(--color-dark);
+      opacity: 0.8;
+    }
+
+    a[aria-selected="true"],
+    a:hover {
+      transition: var(--transition-base);
+      border-bottom: var(--stroke-base);
+      opacity: 1;
+    }
+  }
+
+
+  /*
+   * Tabs Panel
+   */
+  .panel {
+    margin-top: 2rem;
+  }
+
+
+  /*
+   * Responsive
+   */
+  @include sm {
+    li {
+      display: block;
+      width: 100%;
+    }
+  }
+
+}

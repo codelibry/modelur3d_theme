@@ -1,0 +1,19 @@
+.woocommerce-account {
+
+  h2 {
+    font-size: var(--size-h3);
+  }
+
+  .myaccount-grid {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 2rem;
+  }
+
+  @include lg {
+    .myaccount-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+}

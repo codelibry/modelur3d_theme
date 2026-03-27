@@ -1,0 +1,23 @@
+/*
+ * Cluster Layout
+ *
+ * https://codepen.io/Roma13012003/pen/wBvpRzg
+ */
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 1rem);
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 1rem);
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}

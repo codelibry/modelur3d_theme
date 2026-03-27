@@ -1,0 +1,20 @@
+/*
+ * Empty Cart styles
+ */
+
+.woocommerce-cart {
+
+  .wc-empty-cart-message {
+    margin-top: 2rem;
+    @include heading;
+    font-size: var(--size-h3);
+    text-align: center;
+  }
+
+  .return-to-shop {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+}

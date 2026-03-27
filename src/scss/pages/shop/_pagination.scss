@@ -1,0 +1,28 @@
+.woocommerce-pagination {
+  padding: 5rem 0;
+
+	ul.page-numbers {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	span.page-numbers,
+	a.page-numbers {
+		color: var(--color-black);
+		font-family: var(--font-secondary);
+		font-weight: var(--font-bold);
+		font-size: var(--size-md);
+		text-decoration: none;
+		line-height: 1;
+	}
+
+	a.page-numbers:hover {
+		text-decoration: underline;
+		color: var(--color-dark);
+	}
+
+	span.page-numbers.current {
+		color: var(--color-dark);
+	}
+}

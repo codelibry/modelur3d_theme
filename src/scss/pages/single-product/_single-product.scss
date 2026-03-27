@@ -1,0 +1,27 @@
+/*
+ * Single Product General
+ */
+.single-product {
+
+  .single-product-grid {
+    position: relative;
+    --grid-placement: auto-fit;
+    --grid-min-item-size: clamp(16rem, 50vw, 33rem);
+    --gap: 4rem;
+  }
+
+  /*
+   * "On Sale" label
+   */
+  .onsale {
+    padding: 1rem;
+    @include heading;
+    background-color: var(--color-success);
+    color: var(--color-white);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+}

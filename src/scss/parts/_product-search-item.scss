@@ -1,0 +1,25 @@
+.product-search-item {
+  &__inner {
+    display: grid;
+    grid-template-columns: 4rem 1fr 4rem;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__image-box {
+    aspect-ratio: 1 / 1;
+  }
+
+  &__image-box img {
+    @include image-cover;
+  }
+
+  &__title {
+    font-size: var(--size-sm);
+  }
+
+  &__price {
+    --price-size: var(--size-sm);
+    text-align: right;
+  }
+}

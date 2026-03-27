@@ -1,0 +1,20 @@
+.search-products-form {
+  position: relative;
+
+  &__results {
+    padding: 1rem;
+
+    background-color: var(--color-light);
+    box-shadow: var(--shadow-base);
+    max-height: 30rem;
+    max-width: 25rem;
+    width: 100vw;
+    overflow-y: auto;
+
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    transform: translateY(100%);
+  }
+
+}

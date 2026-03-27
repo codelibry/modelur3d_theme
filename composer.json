@@ -1,0 +1,10 @@
+{
+    "require": {
+        "flyntwp/acf-field-group-composer": "^1.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": false
+        }
+    }
+}

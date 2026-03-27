@@ -1,0 +1,38 @@
+.quantity {
+  height: 2rem;
+  display: grid;
+  grid-template-columns: 2rem 2.5rem 2rem;
+  text-align: center;
+
+  input[type="number"] {
+    text-align: center;
+
+    /* Remove number spin button for WebKit browsers */
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Remove number spin button for WebKit browsers */
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  button {
+    @include reset-button;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+  }
+  
+  button:hover,
+  button:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:has(input[type="hidden"]) {
+    display: none;
+  }
+}

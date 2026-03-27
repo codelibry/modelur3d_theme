@@ -1,0 +1,11 @@
+.woocommerce-Price-amount {
+  color: var(--price-color, var(--color-black));
+  font-size: var(--price-size, var(--size-h6));
+  font-weight: var(--price-weight, var(--font-bold));
+
+  // currency symbol
+  .woocommerce-Price-currencySymbol {
+    font-size: 1em;
+    vertical-align: baseline;
+  }
+}

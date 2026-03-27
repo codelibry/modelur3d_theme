@@ -1,0 +1,53 @@
+html {
+  caret-color: var(--color-black);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-black);
+  font-size: var(--size-md);
+  font-family: var(--font-secondary);
+  font-weight: var(--font-regular);
+  line-height: var(--leading-loose);
+  font-size-adjust: from-font;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+footer{
+  margin-top: auto;
+}
+
+main {
+  min-height: 70vh;
+  min-height: 70dvh;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+:target {
+  scroll-margin-block: 5vh;
+}
+
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 0.2lh;
+}
+
+a:has(img) > img {
+	transition: var(--transition-base);
+	filter: none;
+}
+
+a:has(img):hover > img,
+a:has(img):focus-visible > img {
+	filter: grayscale(100%);
+}

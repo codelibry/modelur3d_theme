@@ -1,0 +1,31 @@
+.woocommerce-checkout .coupon-widget {
+  max-width: 40rem;
+
+  .woocommerce-info {
+    margin-bottom: 0.5rem;
+  }
+
+  .button {
+    margin-top: 0.5rem;
+  }
+
+  .coupon-error-notice {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--color-error);
+  }
+}
+
+.woocommerce-cart .coupon {
+  margin-top: 2rem;
+
+  .button {
+    margin-top: 0.5rem;
+  }
+
+  .coupon-error-notice {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--color-error);
+  }
+}

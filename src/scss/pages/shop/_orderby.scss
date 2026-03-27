@@ -1,0 +1,73 @@
+.order-products-select {
+  position: relative;
+  width: 300px;
+  z-index: 99;
+}
+
+.order-products-select select {
+  display: none;
+}
+
+/* Select Button */
+.select-selected {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xs);
+  border: var(--stroke-base);
+
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  color: var(--color-black);
+}
+
+/* Select Dropdown */
+.select-items {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xs);
+  border: var(--stroke-base);
+
+  margin-top: 0.5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  overflow: hidden;
+}
+
+.select-hide {
+  display: none;
+}
+
+/* Select option */
+.select-items div {
+  color: var(--color-black);
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}
+
+.select-items div:not(:first-child) {
+  border-top: var(--stroke-base);
+}
+
+.select-items div:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: url('data:image/svg+xml,%3Csvg%20width%3D%2213%22%20height%3D%228%22%20viewBox%3D%220%200%2013%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M12.5975%201.92304C12.9525%201.56802%2012.9525%200.992413%2012.5975%200.637391C12.2425%200.282369%2011.6668%200.282369%2011.3118%200.637391L6.50011%205.44912L1.68839%200.637391C1.33337%200.282369%200.757763%200.282369%200.402741%200.637391C0.047719%200.992413%200.047719%201.56802%200.402741%201.92304L5.85728%207.37759C6.21231%207.73261%206.78791%207.73261%207.14294%207.37759L12.5975%201.92304Z%22%20fill%3D%22%23171717%22%2F%3E%3C%2Fsvg%3E');
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  transform-origin: center;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  transform: translateY(-50%) rotate(180deg);
+}
+

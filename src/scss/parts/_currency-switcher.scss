@@ -1,0 +1,69 @@
+.currency-switcher {
+	--currency-switcher-width: 6rem;
+
+	--currency-switcher-border: var(--stroke-base);
+	--currency-switcher-bg: var(--color-light);
+
+	--currency-switcher-color: var(--color-dark);
+	--currency-switcher-font-size: var(--font-medium);
+	--currency-switcher-font-weight: var(--font-bold);
+	--currency-switcher-font-family: var(--font-primary);
+
+  --currency-switcher-flag-size: 1rem;
+  --currency-switcher-flag-margin-right: 0.5rem;
+
+  z-index: 0;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    width: var(--currency-switcher-width) !important;
+  }
+
+  // whole select element
+	.selectron23 {
+    flex-basis: 100% !important;
+    width: 100% !important;
+	}
+
+  // select container
+	.selectron23-container {
+		background-color: var(--currency-switcher-bg) !important;
+		border: var(--currency-switcher-border) !important;
+		max-width: 100% !important;
+	}
+
+	.selectron23-container[data-opened="1"] {
+    max-height: max-content !important;
+  }
+
+  // select option
+	.selectron23-option {
+		background-color: var(--currency-switcher-bg) !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: flex-start !important;
+		gap: 4px !important;
+	}
+
+  // text style: usd, eur
+	.selectron23-option-title {
+		font-family: var(--currency-switcher-font-family) !important;
+		font-size: var(--currency-switcher-font-size) !important;
+    color: var(--currency-switcher-color) !important;
+	}
+
+  // default dropdown icon
+  .selectron23-container > span {
+    color: var(--currency-switcher-color) !important;
+  }
+
+  // flag image if present
+	img {
+		margin-top: 0 !important;
+		margin-right: var(--currency-switcher-flag-margin-right) !important;
+		height: var(--currency-switcher-flag-size) !important;
+		width: var(--currency-switcher-flag-size) !important;
+		object-fit: contain !important;
+	}
+}

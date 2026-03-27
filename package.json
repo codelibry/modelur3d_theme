@@ -1,0 +1,38 @@
+{
+  "name": "register",
+  "version": "5.0.0",
+  "description": "Simple webpack config (Webpack 5)",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+	  "start": "webpack --watch",
+    "zip": "node zip",
+    "deploy:staging": "node deploy staging",
+    "deploy:live": "node deploy live"
+  },
+  "author": "WHA",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.25.0",
+    "@babel/plugin-transform-class-properties": "^7.27.1",
+    "@babel/plugin-transform-runtime": "^7.25.0",
+    "@babel/preset-env": "^7.25.0",
+    "@babel/preset-react": "^7.25.0",
+    "archiver": "^7.0.1",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "dotenv": "^17.2.4",
+    "ftp-deploy": "^2.4.7",
+    "mini-css-extract-plugin": "^2.9.0",
+    "sass": "^1.77.0",
+    "sass-loader": "^14.2.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "dependencies": {
+    "swiper": "^11.1.4"
+  }
+}

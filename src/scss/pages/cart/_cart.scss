@@ -1,0 +1,30 @@
+/*
+ * General Cart styles
+ */
+.woocommerce-cart {
+
+  .cart-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    gap: 2rem;
+  }
+
+  .button {
+    margin-top: 1rem;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  // Make single column layout for mobile
+  @include lg {
+    .cart-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

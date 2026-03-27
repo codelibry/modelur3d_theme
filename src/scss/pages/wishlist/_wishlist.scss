@@ -1,0 +1,22 @@
+.woocommerce-wishlist {
+
+  .wishlist-title-container {
+    display: none;
+  }
+
+  thead {
+    display: none;
+  }
+
+  .wishlist_table {
+    width: 100%;
+  }
+
+  ul.wishlist_table {
+    @include grid;
+    --grid-min-item-size: clamp(min(8rem, 100%), 16vw, 10rem);
+    column-gap: 1.5rem;
+    row-gap: 2.5rem;
+  }
+
+}

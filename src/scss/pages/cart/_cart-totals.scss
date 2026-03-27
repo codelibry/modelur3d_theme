@@ -1,0 +1,27 @@
+.cart-totals-column {
+
+  h2 {
+    margin-bottom: 2rem;
+    font-size: var(--size-h3);
+  }
+
+  table {
+    width: 100%;
+  }
+
+  tr td:first-child,
+  tr th:first-child {
+    text-align: left;
+    width: 80%;
+  }
+
+  tr td:last-child,
+  tr th:last-child {
+    text-align: right;
+  }
+
+  .button {
+    margin-top: 2rem;
+  }
+
+}

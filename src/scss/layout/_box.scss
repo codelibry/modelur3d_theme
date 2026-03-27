@@ -1,0 +1,13 @@
+@mixin box {
+  padding: 2.5rem;
+  border-radius: 0;
+  background-color: var(--color-light);
+
+  @include sm {
+    padding: 1.25rem;
+  }
+}
+
+.box {
+  @include box;
+}

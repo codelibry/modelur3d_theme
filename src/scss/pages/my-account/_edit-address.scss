@@ -1,0 +1,10 @@
+.woocommerce-edit-address {
+  .woocommerce-address-fields,
+  .woocommerce-address-fields__field-wrapper {
+    @include flow;
+  }
+
+  form h2 {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,27 @@
+/*
+ * Simple Container class
+ *
+ * https://codepen.io/Roma13012003/pen/QwWazvq
+ */
+
+@mixin container {
+  margin-inline: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: var(--container-md);
+}
+
+.container {
+  @include container;
+  max-width: var(--container-md);
+}
+
+.container-sm {
+  @include container;
+  max-width: var(--container-sm);
+}
+
+.container-lg {
+  @include container;
+  max-width: var(--container-lg);
+}

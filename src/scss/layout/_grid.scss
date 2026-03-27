@@ -1,0 +1,41 @@
+/*
+ * Responsive Grid layout
+ *
+ * https://codepen.io/Roma13012003/pen/GgRyagE 
+ *
+ */
+
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-placement, auto-fill), minmax(var(--grid-min-item-size, 16rem), 1fr));
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  @include grid;
+}
+
+/* Two column grid layout */
+.grid[data-columns='2'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 50vw, 33rem);
+}
+
+/* Three column grid layout */
+.grid[data-columns='3'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(18rem, 33%, 20rem);
+}
+
+/* Four column grid layout */
+.grid[data-columns='4'] {
+	grid-template-columns: 1fr;
+
+	@media (min-width: 500px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (min-width: 900px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}

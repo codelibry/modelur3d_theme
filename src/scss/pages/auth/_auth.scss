@@ -1,0 +1,33 @@
+.page-auth{
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+
+    h3{
+        margin-top: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    a{
+        color: var(--color-primary);
+        text-decoration: none;
+        transition: var(--transition-base);
+
+        &:hover{
+            color: var(--color-dark);
+        }
+    }
+
+}
+
+.woocommerce-form-login__register-text{
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+// General page to enqueu auth related styles depending on the design
+@import 'auth-page/auth-login';
+@import 'auth-page/auth-register';
+@import 'auth-page/auth-lost-password';
+//@import 'pages/auth/login-page/reset-pass-in-popup';

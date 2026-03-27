@@ -1,0 +1,21 @@
+.myaccount-navigation-column {
+
+  ul > li + li {
+    margin-top: 1rem;
+  }
+
+  a {
+    width: 100%;
+    display: block;
+    opacity: 0.8;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+  }
+
+  .is-active a,
+  a:hover {
+    opacity: 1;
+    border-bottom: var(--stroke-base);
+  }
+
+}

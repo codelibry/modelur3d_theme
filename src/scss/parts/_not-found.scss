@@ -1,0 +1,25 @@
+main.not-found {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.not-found {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    &__content {
+        h1 {
+            font-size: clamp(6rem, 20vw, 14rem);
+            line-height: var(--leading-flat);
+            font-weight: var(--font-extra-bold);
+            color: var(--color-primary);
+        }
+    }
+}

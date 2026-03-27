@@ -1,0 +1,41 @@
+/*
+ * Switcher Layout
+ *
+ * https://codepen.io/Roma13012003/pen/WbNdBqq
+ *
+ */
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 1rem);
+  align-items: flex-start;
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((var(--switcher-target-container-width, 40rem) - 100%) * 999);
+}
+
+/* Max 2 items,
+so anything greater than 2 is full width */
+.switcher > :nth-child(n + 3) {
+  flex-basis: 100%;
+}
+
+
+@mixin switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 1rem);
+  align-items: flex-start;
+
+  & > * {
+    flex-grow: 1;
+    flex-basis: calc((var(--switcher-target-container-width, 40rem) - 100%) * 999);
+  }
+
+  & > :nth-child(n + 3) {
+    flex-basis: 100%;
+  }
+}

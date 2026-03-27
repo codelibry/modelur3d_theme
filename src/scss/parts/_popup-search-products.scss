@@ -1,0 +1,43 @@
+.popup-search-products {
+  margin-top: 3rem;
+
+  input[type="search"] {
+    max-width: 100%;
+  }
+
+  &__results {
+    margin-top: 1rem;
+    padding: 1rem 1rem 1rem 0;
+    max-height: 30rem;
+    overflow-y: auto;
+  }
+
+  .search-form-categories {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .popup-search-products__select {
+    height: 2.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  .caret {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    
+    path{
+      stroke: var(--color-dark);
+    }
+  }
+}

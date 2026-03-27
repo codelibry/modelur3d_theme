@@ -1,0 +1,115 @@
+:root {
+
+  /*
+   * =================================================
+   *  Global Tokens
+   * =================================================
+   */
+
+  /*
+   * Colors
+   */
+  --color-black: #383838;     /* Just pure black color */
+  --color-white: #FFFFFF;     /* Just pure white color */
+  --color-bg: #F2F2F2;
+
+  --color-dark: #7B7B7B;      /* Usually used for text color (or opposite) */
+  --color-light: #F7F7F7;     /* Usually used for background color (or opposite) */
+
+  --color-primary: #FFFFFF;   /* Accent color. Usually button's bg color */
+  --color-secondary: #383838; /* Secondary main color. Sometimes is absent */
+
+  --color-success: #29B32E;
+  --color-warning: #F09446;
+  --color-error: #E55130;
+
+  --bg-success: #12980F1F;
+  --bg-error: #C23A1B1F;
+
+
+
+
+  /*
+   * Font Sizes
+   */
+  --size-h1: clamp(3rem, 6vw, 3.375rem);   /* 48px → 54px */
+  --size-h2: clamp(2.375rem, 4.5vw, 3rem); /* 38px → 48px */
+  --size-h3: clamp(2.125rem, 3.5vw, 2.5rem); /* 34px → 40px */
+  --size-h4: clamp(1.375rem, 3vw, 2.125rem); /* 22px → 34px */
+  --size-h5: 1.375rem;                       /* 22px */
+  --size-h6: 1.125rem;                       /* 18px */
+
+  --size-md: 1rem;                           /* 16px */
+  --size-sm: 0.875rem;                       /* 14px */
+  --size-xs: 0.75rem;                        /* 12px */
+
+
+  /*
+   * Font Families
+   */
+  --font-primary: 'Geist', sans-serif;
+  --font-secondary: 'Geist', sans-serif;
+
+
+  /*
+   * Font Weights
+   */
+  --font-extra-bold: 700;
+  --font-bold: 600;
+  --font-medium: 500;
+  --font-regular: 400;
+
+
+  /*
+   * Line Heights
+   */
+  --leading-flat: 1;        /* very compact */
+  --leading-normal: 1.25;   /* default comfortable reading */
+  --leading-relaxed: 1.5;   /* more open, good for body text */
+  --leading-loose: 1.625;   /* airy, headings or large blocks */
+
+
+  /*
+   * Containers Width
+   */
+  --container-sm: 980px;    /* Used for Content Pages ("Privacy Policy", "Cookie Policy") */
+  --container-md: 1200px;   /* The most common container width */
+  --container-lg: 1300px;   /* Can be used for wider Header or Footer */
+
+
+  /*
+   * Border Radius
+   */ 
+  --radius-xs: 8px; 
+  --radius-sm: 12px; 
+  --radius-md: 16px; 
+  --radius-lg: 24px; 
+  --radius-xl: 40px; 
+
+
+  /*
+   * Transitions
+   */
+  --transition-base: all 0.3s ease;
+
+
+  /*
+   * Borders
+   */
+  --stroke-base: 1px solid var(--color-black);
+  --stroke-transparent: 1px solid transparent;
+
+
+  /*
+   * Shadows
+   */
+  --shadow-base: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+
+  /*
+   * =================================================
+   *  Contextual Tokens
+   * =================================================
+   */
+
+}

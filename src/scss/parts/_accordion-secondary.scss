@@ -1,0 +1,66 @@
+.accordion--secondary {
+  .accordion-title {
+    font-family: var(--font-primary);
+    font-size: var(--size-h4);
+    margin-bottom: 1.75rem;
+    text-align: center;
+  }
+
+  .accordion-subtitle{
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    font-weight: var(--font-regular);
+  }
+
+  .accordion-item {
+    background-color: #e4dac8;
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+    border-bottom: none;
+
+    .accordion-header {
+      position: relative;
+      @include reset-button;
+      cursor: pointer;
+      width: 100%;
+      padding-bottom: 0;
+      font-size: var(--size-h6);
+      font-weight: var(--font-bold);
+    }
+
+    &.active .accordion-header:after {
+      transform: rotateX(180deg);
+    }
+
+    .accordion-header:after {
+        //content: url('/wp-content/themes/Ragnarock-Woocommerce/assets/icons/arrow-left.svg');
+      content: '';
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      width: 24px;
+      height: 24px;
+      background-image: url('data:image/svg+xml,<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.9483 9.16895L12.9483 15.1689L6.9483 9.16894" stroke="%23312619" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-size: 24px;
+      transition: var(--transition-base);
+      }
+
+    .accordion-content {
+      transition: var(--transition-base);
+      overflow: hidden;
+      max-height: 0;
+    }
+
+    &.active {
+      .accordion-header::after {
+        transform: rotate(-90deg);
+      }
+
+      .accordion-content {
+        max-height: 200px; // adjust to fit content or use js for auto
+        padding: 0.5rem 0 0;
+      }
+    }
+  }
+}

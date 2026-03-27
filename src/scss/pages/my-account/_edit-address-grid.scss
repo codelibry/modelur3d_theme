@@ -1,0 +1,69 @@
+/*
+ * 50-50 Grid Layout Variant
+ */
+.woocommerce-edit-address {
+
+  .myaccount-content-column:has(.woocommerce-Addresses) {
+    // reset .box styles
+    background-color: inherit;
+    padding: 0;
+  }
+
+  .woocommerce-MyAccount-content > p {
+    display: none;
+  }
+
+  .woocommerce-Addresses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .woocommerce-Address {
+    @include box;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .woocommerce-Address h2 {
+    margin-top: 0;
+    font-size: var(--size-h4);
+    max-width: 80%;
+  }
+
+  a.edit {
+    color: transparent;
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+    transform: translateX(100%);
+
+    &:before {
+      content: url(../assets/icons/edit.svg);
+    }
+
+    &:after {
+      content: "Edit";
+      color: initial;
+      position: absolute;
+      left: 1.5rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+
+  @include lg {
+    .woocommerce-Addresses {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include sm {
+    a.edit {
+      top: 1.5rem;
+    }
+  }
+}

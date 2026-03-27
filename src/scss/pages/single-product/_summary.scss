@@ -1,0 +1,22 @@
+.single-product .summary {
+
+	h1 {
+		font-size: var(--size-h3);
+	}
+
+  .price {
+    --price-size: var(--size-h5);
+  }
+
+  /*
+   * Some Spacings
+   */
+	& > * + * {
+		margin-top: 1rem;
+	}
+
+  .cart {
+    @include flow;
+  }
+
+}

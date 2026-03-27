@@ -1,0 +1,39 @@
+/*
+ * Single Product Gallery
+ */
+.woocommerce-product-gallery {
+  position: relative;
+
+  .flex-viewport,
+  .flex-viewport .flex-active-slide {
+    background-color: var(--color-white);
+    height: clamp(300px, 40vw, 500px) !important;
+  }
+
+  .flex-viewport a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .flex-viewport img {
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .flex-control-thumbs {
+    margin-top: 1rem;
+    @include cluster;
+    --gap: 1rem;
+  }
+
+  .flex-control-thumbs li {
+    cursor: pointer;
+  }
+
+  .woocommerce-product-gallery__trigger {
+    display: none;
+  }
+
+}

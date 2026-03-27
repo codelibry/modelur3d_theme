@@ -1,0 +1,56 @@
+/*
+ * Button
+ */
+
+@mixin button {
+  --button-min-width: 4rem;
+  --button-bg: var(--color-white);
+  --button-text: var(--color-black);
+  --button-x-padding: 0.75rem;
+  --button-y-padding: 1.25rem;
+  --button-gap: 0.5ch;
+  --focus-color: var(--color-primary);
+  --hover-transition: var(--transition-base);
+
+  display: inline-flex;
+  gap: var(--button-gap);
+  align-items: center;
+  justify-content: center;
+  line-height: var(--leading-flat);
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: var(--button-y-padding) var(--button-x-padding);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-size: var(--size-md);
+  font-weight: var(--font-bold);
+  transition: var(--transition-base);
+  min-width: var(--button-min-width);
+
+  &:hover,
+  &:focus-visible {
+    background: var(--color-black);
+    color: var(--color-white);
+  }
+
+  &:active {
+    transform: scale(99%);
+  }
+}
+
+.button,
+input[type="submit"] {
+  @include button;
+}
+
+.button.button--secondary {
+  @include button;
+
+  --button-bg: rgba(255, 255, 255, 0.8);
+  --button-text: var(--color-dark);
+  --focus-color: var(--color-dark);
+}

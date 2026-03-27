@@ -1,0 +1,44 @@
+.popup-login {
+
+  &__reset-password {
+    @include flow;
+  }
+
+  .account-switcher {
+    @include reset-button;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .form-row:has(.woocommerce-form-login__rememberme) {
+    @include repel;
+  }
+
+  .woocommerce-ResetPassword,
+  .woocommerce-form {
+    @include flow;
+  }
+
+  .lost_password {
+    margin-top: 0;
+  }
+
+  button[type="submit"] {
+    margin-top: 0;
+  }
+
+  // .woocommerce-form__label,
+  // .lost_password {
+  //   display: none;
+  // }
+
+  .lost-rem .woocommerce-form__label,
+  .lost-rem .lost_password {
+    display: block;
+  }
+
+  .reset-switcher {
+    margin-top: 0.5rem;
+  }
+
+}

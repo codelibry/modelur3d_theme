@@ -1,0 +1,23 @@
+.header-wishlist {
+  position: relative;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding-bottom: 4px;
+    text-decoration: none !important;
+  }
+
+  &__count {
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    height: 1.25rem;
+    width: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--size-xs);
+    color: var(--color-white);
+  }
+}

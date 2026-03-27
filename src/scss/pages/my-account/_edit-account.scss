@@ -1,0 +1,8 @@
+.woocommerce-edit-account {
+
+  .woocommerce-EditAccountForm > * + *,
+  fieldset > p + p {
+    margin-top: 1rem;
+  }
+
+}

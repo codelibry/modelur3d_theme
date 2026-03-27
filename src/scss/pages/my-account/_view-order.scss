@@ -1,0 +1,24 @@
+.woocommerce-view-order {
+  
+  table {
+    width: 100%;
+  }
+
+  tr td:first-child,
+  tr th:first-child {
+    text-align: left;
+  }
+
+  tr td:last-child,
+  tr th:last-child {
+    text-align: right;
+  }
+
+  // Action Buttons
+  td:has(.order-actions-button) {
+    @include cluster;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+}
