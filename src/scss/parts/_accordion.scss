@@ -1,27 +1,18 @@
-.accordion {
-  .accordion-title {
-    font-family: var(--font-primary);
-    font-size: var(--size-h4);
-    margin-bottom: 1.75rem;
-  }
-
-  .accordion-subtitle{
-    text-align: left;
-    text-transform: uppercase;
-    color: var(--color-primary);
-    font-weight: var(--font-regular);
-  }
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
 
   .accordion-item {
-    border-bottom: 1px solid var(--color-primary);
+    padding: rem(40) rem(36);
+    background: var(--color-white);
 
     .accordion-header {
       position: relative;
       @include reset-button;
       cursor: pointer;
       width: 100%;
-      padding-bottom: 1rem;
-      font-size: var(--size-h6);
+      font-size: var(--size-md);
       font-weight: var(--font-bold);
     }
 
@@ -33,7 +24,7 @@
         //content: url('/wp-content/themes/Ragnarock-Woocommerce/assets/icons/arrow-left.svg');
       content: '';
       position: absolute;
-      right: 0px;
+      right: -10px;
       top: 0px;
       width: 24px;
       height: 24px;
@@ -50,13 +41,28 @@
 
     &.active {
       .accordion-header::after {
-        transform: rotate(-90deg);
+        transform: rotate(180deg);
       }
 
       .accordion-content {
         max-height: 200px; // adjust to fit content or use js for auto
-        padding: 0 0 0.5rem;
+        padding-top: rem(20);
+        padding-bottom: 0;
       }
+    }
+  }
+
+  @include md {
+    .accordion-item {
+      padding: rem(24);
+    }
+
+    .accordion-header:after {
+      right: -18px !important;
+    }
+
+    .accordion-header {
+      padding-right: 12px !important;
     }
   }
 }

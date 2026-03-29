@@ -56,6 +56,12 @@ add_action('acf/init', function () {
                         'sub_fields' => codelibry_acf_fields_why_us(),
                     ],
                     [
+                        'name'       => 'faq',
+                        'label'      => 'FAQ',
+                        'display'    => 'block',
+                        'sub_fields' => codelibry_acf_fields_faq(),
+                    ],
+                    [
                         'name'       => 'reusable-block',
                         'label'      => 'Reusable Block',
                         'display'    => 'block',

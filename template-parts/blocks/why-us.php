@@ -13,7 +13,7 @@ $items    = get_array_value($args, 'why_item', get('why_item'));
         </div>
 
 
-        <div class="why-us__items | grid">
+        <div class="why-us__items | grid" id="why">
             <?php if (!empty($items)) : ?>
                 <?php foreach ($items as $item) : 
                     $item_text = $item['text'];

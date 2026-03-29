@@ -20,7 +20,7 @@ $items    = get_array_value($args, 'how_item', get('how_item'));
             <?php endif; ?>
         </div>
 
-        <div class="how-work__content">
+        <div class="how-work__content" id="how">
             <div class="how-work__items">
                 <?php if (!empty($items)) : ?>
                     <?php foreach ($items as $item) : 

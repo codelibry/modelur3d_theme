@@ -6,6 +6,7 @@ import './js/header-submenu';
 import './js/reset-pass';
 import './js/password-toggle';
 import './js/product-tab';
+import './js/accordion';
 import './scss/main.scss';
 
 /*
