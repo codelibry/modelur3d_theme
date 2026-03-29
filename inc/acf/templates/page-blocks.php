@@ -44,6 +44,12 @@ add_action('acf/init', function () {
                         'sub_fields' => codelibry_acf_fields_product_tab(),
                     ],
                     [
+                        'name'       => 'how-work',
+                        'label'      => 'How it works',
+                        'display'    => 'block',
+                        'sub_fields' => codelibry_acf_fields_how_work(),
+                    ],
+                    [
                         'name'       => 'reusable-block',
                         'label'      => 'Reusable Block',
                         'display'    => 'block',
