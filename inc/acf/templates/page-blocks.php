@@ -50,6 +50,12 @@ add_action('acf/init', function () {
                         'sub_fields' => codelibry_acf_fields_how_work(),
                     ],
                     [
+                        'name'       => 'why-us',
+                        'label'      => 'Why Join Us',
+                        'display'    => 'block',
+                        'sub_fields' => codelibry_acf_fields_why_us(),
+                    ],
+                    [
                         'name'       => 'reusable-block',
                         'label'      => 'Reusable Block',
                         'display'    => 'block',
