@@ -21,7 +21,7 @@ if (!$image && !$text) {
             <?php endif; ?>
 
             <?php if ($text): ?>
-                <div class="image-text__content | content">
+                <div class="image-text__content">
                     <?php echo wp_kses_post($text); ?>
                 </div>
             <?php endif; ?>
