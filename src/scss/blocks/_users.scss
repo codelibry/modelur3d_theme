@@ -46,13 +46,21 @@
         }
     }
 
-    @include sm {
+    @include md {
         .user-card {
             flex-direction: column;
             max-height: 100%;
 
              &__image, &__content {
                 flex: 1;
+             }
+
+             &__image {
+                max-height: 20rem;
+
+                img {
+                    width: auto;
+                }
              }
         }
     }

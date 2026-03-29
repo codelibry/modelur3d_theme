@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6,
   @include heading;
 }
 
+p {
+  color: var(--color-dark);
+}
+
 h1, .h1 {
   font-size: var(--size-h1);
 } 
