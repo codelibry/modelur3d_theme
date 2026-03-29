@@ -18,6 +18,9 @@
 
     &__text {
         max-width: 55%;
+        p {
+            color: var(--color-white);
+        }
     }
 
     .button {

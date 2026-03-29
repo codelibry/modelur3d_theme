@@ -3,6 +3,9 @@ $text = get_array_value($args, 'banner-text', get('banner-text'));
 $title = get_array_value($args, 'banner-title', get('banner-title'));
 $button   = get_array_value($args, 'banner-button', get('banner-button'));
 $image_id = get_array_value($args, 'banner-image', get('banner-image'));
+$button_color = get_array_value($args, 'banner-button-color', get('banner-button-color'));
+
+$btn_modifier = ($button_color === 'white') ? '' : 'button--secondary';
 
 
 $bg_style = '';
@@ -34,7 +37,7 @@ if ($image_id) {
                     $label  = $button['title'] ?? 'Learn More';
                     $target = $button['target'] ?: '_self';
                     ?>
-                    <a class="button button--secondary" 
+                    <a class="button <?php echo esc_attr($btn_modifier); ?>" 
                     href="<?php echo esc_url($url); ?>" 
                     target="<?php echo esc_attr($target); ?>">
                         <?php echo esc_html($label); ?>

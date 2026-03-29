@@ -27,6 +27,17 @@ function codelibry_acf_fields_banner(): array {
             'required'     => 0,
         ],
         [
+            'label'    => 'Button Color',
+            'name'     => 'banner-button-color',
+            'type'     => 'button_group',
+            'choices'  => [
+                'black' => 'Black',
+                'white' => 'White',
+            ],
+            'default_value' => 'black',
+            'wrapper'  => ['width' => '50'],
+        ],
+        [
             'label'         => 'Button',
             'name'          => 'banner-button',
             'type'          => 'link',
