@@ -6,5 +6,9 @@
   --grid-min-item-size: clamp(min(16rem, 100%), 18vw, 12rem);
   @include grid;
   column-gap: rem(32);
-  row-gap: 2.5rem;
+  row-gap: rem(80);
+
+  @include md {
+    row-gap: rem(40);
+  }
 }

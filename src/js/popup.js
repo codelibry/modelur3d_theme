@@ -36,8 +36,6 @@ function InitPopups() {
         if (this.popup.id === 'checkout-popup') {
           this.clearTopUpCart();
         }
-        // Also clear inputs on native dialog close events (like pressing Esc)
-        this.clearFormInputs(); 
       });
     }
 
@@ -62,7 +60,6 @@ function InitPopups() {
     handleClose() {
       this.popup.close();
       this.cleanPopupMessages();
-      this.clearFormInputs();
 
       // Clean reset-error query param and error message when reset popup closes
       if (this.popup.id === 'popup-reset-form') {
@@ -80,18 +77,6 @@ function InitPopups() {
       if (!hasErrors) {
         this.removeHash();
       }
-    }
-
-    // NEW METHOD: Clears all inputs, textareas, and selects
-    clearFormInputs() {
-      const inputs = this.popup.querySelectorAll('input, textarea, select');
-      inputs.forEach(input => {
-        if (input.type === 'checkbox' || input.type === 'radio') {
-          input.checked = false;
-        } else {
-          input.value = '';
-        }
-      });
     }
 
     cleanPopupMessages() {

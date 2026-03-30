@@ -6,13 +6,6 @@
 add_action( 'woocommerce_shop_loop_header', function() { ?>
 	<div class="container">
 		<div class="shop-grid">
-			<aside class="shop-filters-column">
-        <div class="shop-filters">
-			
-			<?php echo do_shortcode('[woof_mobile]'); ?>
-            <?php echo do_shortcode('[woof mobile_mode=1 sid="test"]'); ?>
-        </div>
-			</aside>
 <?php }, 10);
 
 
@@ -37,8 +30,28 @@ add_action( 'woocommerce_before_shop_loop', function() { ?>
 /*
  * Wrap "Results Count" and "OrderBy" components in a single container
  */
-add_action( 'woocommerce_before_shop_loop', function() { ?>
+add_action( 'woocommerce_before_shop_loop', function() { 
+	$current_orderby = isset($_GET['orderby']) ? $_GET['orderby'] : '';
+    $shop_url = get_permalink( wc_get_page_id( 'shop' ) );
+	?>
 	<div class="shop-top-bar | repel">
+		<h2>Our collection</h2>
+		<div class="shop-custom-filters">
+            <a href="<?php echo add_query_arg('orderby', 'popularity', $shop_url); ?>" 
+               class="button <?php echo ($current_orderby == 'popularity') ? 'is-active' : ''; ?>">
+               Best Selling
+            </a>
+            
+            <a href="<?php echo add_query_arg('orderby', 'rating', $shop_url); ?>" 
+               class="button <?php echo ($current_orderby == 'rating') ? 'is-active' : ''; ?>">
+               Top Rated
+            </a>
+            
+            <a href="<?php echo add_query_arg('orderby', 'date', $shop_url); ?>" 
+               class="button <?php echo ($current_orderby == 'date') ? 'is-active' : ''; ?>">
+               Recently Added
+            </a>
+        </div>
 <?php }, 15);
 
 add_action( 'woocommerce_before_shop_loop', function() { ?>

@@ -8,7 +8,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
     return;
 }
 
-$image_id   = $product->get_image_id() ? $product->get_image_id() : get_option( 'woocommerce_placeholder_image' );
+$image_id  = $product->get_image_id();
 $title      = $product->get_name();
 $price      = $product->get_price();
 $permalink  = get_permalink( $product->get_id() );
@@ -20,10 +20,32 @@ $attributes = $product->get_attributes();
 
 
     <div class="product-card__thumbnail">
-        <?php echo wp_get_attachment_image( $image_id, 'medium', false, [ 'loading' => 'lazy' ] ); ?>
-
+        <?php if ( $image_id ) : ?>
+            <?php echo wp_get_attachment_image( $image_id, 'medium', false, [ 'loading' => 'lazy' ] ); ?>
+        <?php else : ?>
+            <?php
+            // WooCommerce placeholder — get_option returns an attachment ID (integer).
+            $placeholder_id  = get_option( 'woocommerce_placeholder_image', 0 );
+            $placeholder_src = wc_placeholder_img_src( 'medium' );
+            ?>
+            <?php if ( $placeholder_id ) : ?>
+                <?php echo wp_get_attachment_image( $placeholder_id, 'medium', false, [
+                    'loading' => 'lazy',
+                    'class'   => 'product-card__placeholder',
+                    'alt'     => '',
+                ] ); ?>
+            <?php else : ?>
+                <img
+                    src="<?php echo esc_url( $placeholder_src ); ?>"
+                    alt=""
+                    class="product-card__placeholder"
+                    loading="lazy"
+                >
+            <?php endif; ?>
+        <?php endif; ?>
+ 
         <a class="product-card__icon-link" href="<?php echo esc_url( $permalink ); ?>" aria-label="<?php echo esc_attr( $title ); ?>">
-            <?php echo get_inline_svg('go-to'); ?>
+            <?php echo get_inline_svg( 'go-to' ); ?>
         </a>
     </div>
     <?php

@@ -28,7 +28,7 @@
 
       font-weight: var(--font-bold);
       font-size: var(--size-sm);
-      text-transform: uppercase;
+      transition: var(--transition-base);
       text-decoration: none;
       line-height: 1;
       background: var(--color-white);
