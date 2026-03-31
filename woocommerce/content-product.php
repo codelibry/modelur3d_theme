@@ -9,45 +9,51 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 
 $image_id  = $product->get_image_id();
-$title      = $product->get_name();
-$price      = $product->get_price();
-$permalink  = get_permalink( $product->get_id() );
+$title     = $product->get_name();
+$price     = $product->get_price();
+$permalink = get_permalink( $product->get_id() );
 $attributes = $product->get_attributes();
 
 ?>
 
 <li <?php wc_product_class( 'product-card', $product ); ?>>
 
-
     <div class="product-card__thumbnail">
         <?php if ( $image_id ) : ?>
+
             <?php echo wp_get_attachment_image( $image_id, 'medium', false, [ 'loading' => 'lazy' ] ); ?>
+
         <?php else : ?>
             <?php
-            // WooCommerce placeholder — get_option returns an attachment ID (integer).
-            $placeholder_id  = get_option( 'woocommerce_placeholder_image', 0 );
+            // Cast to int — the option can return "0" (string) which is truthy
+            $placeholder_id  = (int) get_option( 'woocommerce_placeholder_image', 0 );
             $placeholder_src = wc_placeholder_img_src( 'medium' );
             ?>
-            <?php if ( $placeholder_id ) : ?>
+            <?php if ( $placeholder_id > 0 ) : ?>
+
                 <?php echo wp_get_attachment_image( $placeholder_id, 'medium', false, [
                     'loading' => 'lazy',
                     'class'   => 'product-card__placeholder',
                     'alt'     => '',
                 ] ); ?>
+
             <?php else : ?>
+
                 <img
                     src="<?php echo esc_url( $placeholder_src ); ?>"
                     alt=""
                     class="product-card__placeholder"
                     loading="lazy"
                 >
+
             <?php endif; ?>
         <?php endif; ?>
- 
+
         <a class="product-card__icon-link" href="<?php echo esc_url( $permalink ); ?>" aria-label="<?php echo esc_attr( $title ); ?>">
             <?php echo get_inline_svg( 'go-to' ); ?>
         </a>
     </div>
+
     <?php
     $attr_items = [];
 
@@ -55,20 +61,20 @@ $attributes = $product->get_attributes();
         if ( ! $attribute->get_visible() ) continue;
 
         if ( $attribute->is_taxonomy() ) {
-            $terms = wc_get_product_terms( $product->get_id(), $attribute->get_name(), [ 'fields' => 'names' ] );
+            $terms  = wc_get_product_terms( $product->get_id(), $attribute->get_name(), [ 'fields' => 'names' ] );
             $values = $terms;
         } else {
             $values = $attribute->get_options();
         }
 
         if ( ! empty( $values ) ) {
-            $attr_items[] = implode( ', ', $values );
+            $attr_items[] = implode( ' | ', $values );
         }
     }
 
     $categories = wc_get_product_terms( $product->get_id(), 'product_cat', [ 'fields' => 'names' ] );
     if ( ! empty( $categories ) ) {
-        array_unshift( $attr_items, implode( ', ', $categories ) );
+        array_unshift( $attr_items, implode( ' | ', $categories ) );
     }
     ?>
 
