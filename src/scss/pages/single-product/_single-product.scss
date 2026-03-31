@@ -7,7 +7,7 @@
     position: relative;
     --grid-placement: auto-fit;
     --grid-min-item-size: clamp(16rem, 50vw, 33rem);
-    --gap: 4rem;
+    --gap: 5rem;
   }
 
   /*
@@ -24,4 +24,18 @@
     z-index: 1;
   }
 
+  @include md {
+    .single-product-grid {
+      --gap: 2.5rem;
+    }
+  }
+
+}
+
+.single-product-wrapper {
+  padding-bottom: rem(80);
+
+  @include md {
+    padding-bottom: rem(40);
+  }
 }

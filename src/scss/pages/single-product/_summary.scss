@@ -1,7 +1,7 @@
 .single-product .summary {
 
 	h1 {
-		font-size: var(--size-h3);
+		font-size: var(--size-h2);
 	}
 
   .price {
@@ -12,11 +12,60 @@
    * Some Spacings
    */
 	& > * + * {
-		margin-top: 1rem;
+		margin-top: rem(40);
 	}
 
   .cart {
     @include flow;
+  }
+
+  .custom-price-cart-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .quantity {
+    display: none;
+  }
+
+  .single_add_to_cart_button {
+    --button-bg: var(--color-black);
+    --button-text: var(--color-white);
+    --focus-color: var(--color-dark);
+    --button-x-padding: 2.125rem;
+    margin: 0;
+
+    &:hover {
+      background: var(--color-white);
+      color: var(--color-black);
+    }
+  }
+
+  .custom-product-meta-block {
+    margin-top: rem(60);
+
+    &__title {
+      font-size: var(--size-md);
+      margin-bottom: rem(40);
+    }
+
+    &__row {
+      padding: rem(20);
+      display: flex;
+      justify-content: space-between;
+      font-size: var(--size-sm);
+      color: var(--color-dark);
+      background: transparent;
+    }
+
+    &__name {
+      font-weight: var(--font-bold);
+    }
+
+    &__row:nth-child(even) {
+      background: var(--color-white);
+    }
   }
 
 }

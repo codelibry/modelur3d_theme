@@ -14,3 +14,18 @@ add_action( 'woocommerce_after_single_product_summary', function() { ?>
 		</div>
 	</section>
 <?php }, 0 );
+
+
+/**
+ * Open wrapper div around price + add to cart.
+ */
+function custom_price_cart_wrapper_open() {
+    echo '<div class="custom-price-cart-wrapper">';
+}
+
+/**
+ * Close wrapper div around price + add to cart.
+ */
+function custom_price_cart_wrapper_close() {
+    echo '</div>';
+}

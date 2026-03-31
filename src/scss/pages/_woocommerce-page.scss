@@ -5,4 +5,8 @@ main .woocommerce-page {
     margin-bottom: 4rem;
     text-align: center;
   }
+
+  @include md {
+    padding: 5rem 0;
+  }
 }
