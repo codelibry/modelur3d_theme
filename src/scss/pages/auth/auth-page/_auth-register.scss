@@ -1,3 +1,32 @@
-.woocommerce-form-register__submit{
-    width: 100%;
+.popup-login__register{
+    --flow-space: 24px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .woocommerce-privacy-policy-text {
+        display: none;
+    }
+
+    .checkbox-row {
+        margin-top: rem(8);
+    }
+
+    .woocommerce-form__label-for-checkbox {
+        font-weight: var(--font-regular);
+        color: var(--color-dark);
+
+        a {
+            text-decoration: none;
+            font-weight: var(--font-extra-bold);
+            transition: var(--transition-base);
+            color: var(--color-black);
+
+            &:hover {
+                color: var(--color-dark);
+            }
+        }
+    }
 }

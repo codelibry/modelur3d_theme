@@ -1,7 +1,40 @@
 .woocommerce-form-login{
+    --flow-space: 24px;
+
+    h2, h3, p:not(.form-row, .lost_password) {
+        text-align: center;
+    }
+
+    h2,h3 {
+        margin-bottom: 40px;
+    }
 
     & > .lost_password{
         display: none;
+    }
+
+    .clear {
+        display: none;
+    }
+
+    .lost-rem {
+        margin-top: rem(8);
+    }
+
+    .lost_password {
+        text-align: right;
+
+        a {
+            text-decoration: none;
+            font-weight: var(--font-bold);
+            color: var(--color-black);
+
+            transition: var(--transition-base);
+
+            &:hover {
+                color: var(--color-dark);
+            }
+        }
     }
 
     & > .form-row{
@@ -9,8 +42,39 @@
             display: none;
         }
     }
+
+    .woocommerce-privacy-policy-text {
+        display: none;
+    }
 }
 
-.woocommerce-form-login__submit{
-    width: 100%;
+.account-switcher-wrapper {
+    text-align: center;
+    font-weight: var(--font-extra-bold);
+    margin-top: rem(40);
+
+    a {
+        color: var(--color-black);
+        text-decoration: none;
+        transition: var(--transition-base);
+
+        &:hover {
+            color: var(--color-dark);
+        }
+    }
+}
+
+.woocommerce-form-login__submit, .popup-login .woocommerce-Button.button, .woocommerce-form-register__submit{
+    width: fit-content;
+    margin-inline: auto;
+    display: block;
+    margin-top: 40px;
+    --button-bg: var(--color-black);
+    --button-text: var(--color-white);
+    --focus-color: var(--color-dark);
+
+    &:hover {
+        background: var(--color-white);
+        color: var(--color-black);
+    }
 }

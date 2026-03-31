@@ -18,7 +18,7 @@ add_action( 'woocommerce_register_form', function() {
 
   // Add custom checkbox
   ?>
-  <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+  <p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide checkbox-row">
       <label class="woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
           <input class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox"
                  name="privacy_policy" type="checkbox" id="privacy_policy" value="1" required />

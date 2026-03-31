@@ -13,9 +13,8 @@ add_action('woocommerce_login_form', function() { ?>
       </p>
 
       <p class="woocommerce-LostPassword lost_password">
-        <?php esc_html_e('Forgot your password?', 'ragnarock') ?>
         <a class="account-switcher reset-switcher" href="#popup-reset-form">
-          <?php esc_html_e('Reset', 'ragnarock') ?>
+          <?php esc_html_e('Forgot password?', 'ragnarock') ?>
         </a>
       </p>
     </div>
