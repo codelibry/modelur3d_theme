@@ -1,12 +1,14 @@
 .cart-totals-column {
 
   h2 {
-    margin-bottom: 2rem;
-    font-size: var(--size-h3);
+    margin-bottom: rem(40);
+    font-size: var(--size-md);
   }
 
   table {
     width: 100%;
+    padding: rem(40);
+    background: var(--color-white);
   }
 
   tr td:first-child,
@@ -20,8 +22,39 @@
     text-align: right;
   }
 
+  .order-total {
+    th, td {
+      padding-top: rem(60);
+    }
+
+    th {
+      font-size: var(--size-md);
+    }
+
+    td .amount, td bdi{
+      font-size: var(--size-h5);
+    }
+  }
+
+  .checkout-button {
+    --button-bg: var(--color-black);
+    --button-text: var(--color-white);
+    --focus-color: var(--color-dark);
+
+    &:hover {
+      background: var(--color-white);
+      color: var(--color-black);
+    }
+  }
+
   .button {
-    margin-top: 2rem;
+    margin-top: rem(40);
+  }
+
+  @include md {
+    table {
+      padding: rem(24);
+    }
   }
 
 }

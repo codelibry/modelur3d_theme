@@ -17,13 +17,15 @@
     /* Remove number spin button for WebKit browsers */
     &[type="number"] {
       -moz-appearance: textfield;
+      border: none;
+      background-color: transparent
     }
   }
 
   button {
     @include reset-button;
     background-color: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-black);
     cursor: pointer;
   }
   

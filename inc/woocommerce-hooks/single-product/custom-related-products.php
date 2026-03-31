@@ -9,6 +9,7 @@ add_action( 'woocommerce_after_single_product_summary', function() {
   global $product;
 
   get_template_part('template-parts/blocks/product-related', null, [
+    'title' => 'Other products'
 
   ]);
 }, 20 );

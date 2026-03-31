@@ -3,10 +3,20 @@
  */
 .woocommerce-cart {
 
+  .woocommerce-page__title {
+    text-align: left;
+  }
+
+  .cart-table-column {
+    padding: 0;
+    background-color: transparent;
+  }
+
   .cart-grid {
     display: grid;
     grid-template-columns: 1fr 0.6fr;
-    gap: 2rem;
+    gap: rem(80);
+    padding-bottom: rem(24);
   }
 
   .button {
@@ -19,6 +29,12 @@
 
   thead {
     display: none;
+  }
+
+  .wc-proceed-to-checkout {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   // Make single column layout for mobile

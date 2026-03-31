@@ -1,6 +1,7 @@
 import InitPopups from './js/popup.js';
 import MobileMenu from './js/mobile-menu.js';
 import TestimSlider from './js/testimonials.js';
+import HeaderCart from './js/header-cart.js';
 
 import './js/header-submenu';
 import './js/reset-pass';
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   InitPopups();
   MobileMenu();
   TestimSlider();
+  HeaderCart();
 
 });
 
