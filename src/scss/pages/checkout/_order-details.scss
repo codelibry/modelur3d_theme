@@ -22,10 +22,23 @@
   .woocommerce-terms-and-conditions-wrapper {
     margin-top: 1rem;
   }
+  
 
   .validate-required {
     margin-top: 1rem;
   }
+
+  #place_order {
+    --button-bg: var(--color-black);
+    --button-text: var(--color-white);
+    --focus-color: var(--color-dark);
+
+    &:hover {
+      background: var(--color-white);
+      color: var(--color-black);
+    }
+  }
+
 
   .button {
     margin-top: 1rem;
