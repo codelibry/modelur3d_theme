@@ -10,6 +10,8 @@
   table {
     min-width: 100%;
     width: max-content;
+    padding: rem(40);
+    background: var(--color-white);
   }
 
   th, td {
@@ -20,6 +22,17 @@
   tr th:first-child,
   tr td:first-child {
     padding-left: 0;
+  }
+
+  .woocommerce-button {
+    --button-bg: var(--color-black);
+    --button-text: var(--color-white);
+    --focus-color: var(--color-dark);
+
+    &:hover {
+      background: var(--color-white);
+      color: var(--color-black);
+    }
   }
 
   [data-title="Actions"] {

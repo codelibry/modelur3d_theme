@@ -1,0 +1,97 @@
+.top-up-balance {
+    padding: rem(40);
+    background: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+
+    h2, h6 {
+        font-size: var(--size-h5);
+    }
+
+    .user-balance {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+        font-size: var(--size-md);
+        font-weight: var(--font-bold);
+
+        strong {
+            font-size: var(--size-h5);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        button {
+            background: var(--color-white);
+            border: none;
+            padding: 0;
+            width: 60px;
+            height: 40px;
+            font-weight: var(--font-bold);
+            cursor: pointer;
+            transition: var(--transition-base);
+
+            &:hover {
+                background: var(--color-black);
+                color: var(--color-white);
+            }
+        }
+    }
+
+    input[type="number"] {
+        width: 100%;
+        margin-top: rem(32);
+        margin-bottom: rem(32);
+        border: none;
+        outline: none;
+        padding: 16px 20px;
+        color: var(--color-dark);
+    }
+
+    #top-up-submit {
+        --button-bg: var(--color-black);
+        --button-text: var(--color-white);
+        --focus-color: var(--color-dark);
+        float: right;
+
+        &:hover {
+            background: var(--color-white);
+            color: var(--color-black);
+        }
+    }
+
+    @include md {
+        padding: rem(24);
+    }
+}
+
+.rmp-withdraw-block {
+    border: none;
+
+    h6 {
+        font-size: var(--size-h5);
+        font-weight: var(--font-bold);
+        margin-bottom: 2rem;
+    }
+
+    .rmp-withdraw-field .input-text, .rmp-withdraw-field textarea {
+        max-width: 100%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        button {
+            margin-top: 0 !important;
+            margin-left: auto;
+        }
+    }
+}

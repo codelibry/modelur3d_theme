@@ -1,21 +1,38 @@
 .myaccount-navigation-column {
 
   ul > li + li {
-    margin-top: 1rem;
+    margin-top: rem(10);
   }
 
   a {
     width: 100%;
-    display: block;
-    opacity: 0.8;
-    border-bottom: 1px solid transparent;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
     text-decoration: none;
+    padding: rem(8) rem(20);
+    background: var(--color-white);
+    color: var(--color-black);
+    transition: var(--transition-base);
+    font-weight: var(--font-extra-bold);
+    
   }
 
   .is-active a,
   a:hover {
     opacity: 1;
-    border-bottom: var(--stroke-base);
+    background: var(--color-black);
+    color: var(--color-white);
+  }
+
+  li.woocommerce-MyAccount-navigation-link--customer-logout a{
+    background: #C23A1B14;
+    color: var(--color-error);
+
+    &:hover {
+      color: var(--color-white);
+      background: var(--color-error);
+    }
   }
 
 }

@@ -4,15 +4,52 @@
     font-size: var(--size-h3);
   }
 
+  h3 {
+    font-size: var(--size-h5);
+    font-weight: var(--font-bold);
+    margin-top: 0;
+    margin-bottom: rem(32);
+  }
+
+  .woocommerce-account-fields {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+  }
+
   .myaccount-grid {
     display: grid;
-    grid-template-columns: 15rem 1fr;
-    gap: 2rem;
+    grid-template-columns: rem(150) 1fr;
+    gap: rem(140);
+  }
+
+  .account-section {
+    --flow-space: 40px;
+
+    .form-row {
+      margin-top: rem(40);
+    }
+  }
+
+  button[type="submit"] {
+    margin-top: rem(40);
+    width: fit-content;
+    float: right;
+
+    --button-bg: var(--color-black);
+    --button-text: var(--color-white);
+    --focus-color: var(--color-dark);
+
+    &:hover {
+      background: var(--color-white);
+      color: var(--color-black);
+    }
   }
 
   @include lg {
     .myaccount-grid {
       grid-template-columns: 1fr;
+      gap: rem(60);
     }
   }
 

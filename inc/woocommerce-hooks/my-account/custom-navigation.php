@@ -28,10 +28,33 @@ add_filter( 'woocommerce_account_menu_items', function ( $items ) {
      */
 
     if ( isset( $items['add_balance'] ) ) {
-        $items['add_balance'] = __( 'My Balance', 'ragnarock' );
+        $items['add_balance'] = __( 'Balance', 'ragnarock' );
+    }
+
+    if ( isset( $items['dashboard'] ) ) {
+        $items['dashboard'] = __( 'Account', 'ragnarock' );
+    }
+
+    if ( isset( $items['orders'] ) ) {
+        $items['orders'] = __( 'Purches', 'ragnarock' );
+    }
+
+    if ( isset( $items['submit-product'] ) ) {
+        $items['submit-product'] = __( 'Sell 3D', 'ragnarock' );
+    }
+
+    if ( isset( $items['my-submissions'] ) ) {
+        $items['my-submissions'] = __( 'My 3D', 'ragnarock' );
     }
 
 
+    if ( isset( $items['my-products'] ) ) {
+        $items['my-products'] = __( 'Sold 3D', 'ragnarock' );
+    }
+
+    if ( isset( $items['my-withdrawals'] ) ) {
+        $items['my-withdrawals'] = __( 'Withdrawals', 'ragnarock' );
+    }
 
     /*
      * 3. Sort but KEEP plugin endpoints
