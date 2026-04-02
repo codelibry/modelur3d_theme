@@ -1,0 +1,48 @@
+.woocommerce-my-withdrawals .rmp-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+
+    h3 {
+        font-size: var(--size-h2);
+        width: fit-content;
+        margin: 0;
+    }
+
+    .rmp-desc {
+        display: none;
+    }
+
+
+    .rmp-tabs {
+        border: none;
+        gap: 10px;
+        margin: 0;
+
+        button {
+            @include button;
+
+            border: none;
+            background: var(--color-white);
+
+        }
+
+        .active {
+            background-color: var(--color-black);
+            color: var(--color-white);
+        }
+    }
+
+    #rmp-tab-withdrawals, #rmp-tab-history {
+        width: 100%;
+        max-width: 90vw;
+        overflow-x: auto;
+        margin-top: rem(26);
+    }
+
+    .rmp-empty {
+        width: 100%;
+    }
+
+}

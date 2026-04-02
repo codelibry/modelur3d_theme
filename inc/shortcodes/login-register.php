@@ -91,10 +91,20 @@ add_shortcode( 'wc_reg_form_rs', 'rs_separate_registration_form' );
 function rs_separate_registration_form() {
     if ( is_user_logged_in() ) return '<p>You are already registered</p>';
     ob_start();
-    
+
+    // ── Email confirmation: show "check your inbox" message after registration ──
+    if ( isset( $_GET['registered'] ) && $_GET['registered'] === '1' ) {
+        echo '<div class="woocommerce-message" role="alert">';
+        echo '<strong>' . esc_html__( 'Registration successful!', 'modelur3d' ) . '</strong> ';
+        echo esc_html__( 'A confirmation email has been sent to your email address. Please click the link in the email to activate your account before logging in.', 'modelur3d' );
+        echo '</div>';
+        // Show only the notice, not the form again
+        return ob_get_clean();
+    }
+
     // Display stored notices for registration
     rs_display_stored_notices('register');
-    
+    remove_action( 'woocommerce_before_customer_login_form', 'woocommerce_output_all_notices', 10 );
     do_action( 'woocommerce_before_customer_login_form' );
     $html = wc_get_template_html( 'myaccount/form-login.php' );
 
@@ -131,10 +141,30 @@ add_shortcode( 'wc_login_form_rs', function() {
     }
 
     ob_start();
-    
+
+    // ── Email confirmation: show result notices on login page ─────────────────
+    if ( isset( $_GET['confirmed'] ) ) {
+        $state = sanitize_text_field( $_GET['confirmed'] );
+        if ( $state === '1' ) {
+            echo '<div class="woocommerce-message" role="alert">';
+            echo '<strong>' . esc_html__( 'Email confirmed!', 'modelur3d' ) . '</strong> ';
+            echo esc_html__( 'Your account is now active. You can log in below.', 'modelur3d' );
+            echo '</div>';
+        } elseif ( $state === 'already' ) {
+            echo '<div class="woocommerce-info" role="alert">';
+            echo esc_html__( 'Your email is already confirmed. Please log in.', 'modelur3d' );
+            echo '</div>';
+        } elseif ( $state === 'invalid' ) {
+            echo '<div class="woocommerce-error" role="alert">';
+            echo '<strong>' . esc_html__( 'Invalid confirmation link.', 'modelur3d' ) . '</strong> ';
+            echo esc_html__( 'The link may have expired. Please register again or contact support.', 'modelur3d' );
+            echo '</div>';
+        }
+    }
+
     // Display stored notices for login
     rs_display_stored_notices('login');
-    
+    remove_action( 'woocommerce_before_customer_login_form', 'woocommerce_output_all_notices', 10 );
     do_action( 'woocommerce_before_customer_login_form' );
     woocommerce_login_form( array(
         'redirect' => wc_get_page_permalink( 'myaccount' )
@@ -152,18 +182,21 @@ add_shortcode( 'wc_login_form_rs', function() {
  
 // -----------------------------
 // AUTO LOGIN AFTER REGISTRATION
-add_action( 'woocommerce_created_customer', function( $customer_id ) {
-    wp_set_current_user( $customer_id );
-    wp_set_auth_cookie( $customer_id );
-}, 20, 1 );
+// Disabled: auto-login is blocked until the user confirms their email.
+// See inc/email-confirmation.php for the confirmation flow.
+// add_action( 'woocommerce_created_customer', function( $customer_id ) {
+//     wp_set_current_user( $customer_id );
+//     wp_set_auth_cookie( $customer_id );
+// }, 20, 1 );
 
 
 
 // -----------------------------
 // REDIRECT LOGIN & REGISTRATION
-add_filter( 'woocommerce_registration_redirect', function() {
-    return wc_get_page_permalink( 'myaccount' );
-});
+// Registration redirect is handled by inc/email-confirmation.php (redirects to /register/?registered=1).
+// add_filter( 'woocommerce_registration_redirect', function() {
+//     return wc_get_page_permalink( 'myaccount' );
+// });
 
 add_filter( 'woocommerce_login_redirect', function( $redirect, $user ) {
     return wc_get_page_permalink( 'myaccount' );

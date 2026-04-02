@@ -53,7 +53,7 @@ add_filter( 'woocommerce_account_menu_items', function ( $items ) {
     }
 
     if ( isset( $items['my-withdrawals'] ) ) {
-        $items['my-withdrawals'] = __( 'Withdrawals', 'ragnarock' );
+        $items['my-withdrawals'] = __( 'Operations', 'ragnarock' );
     }
 
     /*

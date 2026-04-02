@@ -1,0 +1,33 @@
+.woocommerce-submit-product  {
+    .rmp-wrap {
+        padding: rem(40);
+        background: var(--color-light);
+    }
+
+    h3 {
+        font-size: var(--size-h5);
+    }
+
+    .rmp-price-wrap {
+        width: 100%;
+    }
+
+    .choose-wrapper {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            color: var(--color-dark);
+        }
+    }
+
+    @include md {
+        .rmp-wrap {
+            padding: rem(24);
+        }
+    }
+}
