@@ -9,3 +9,19 @@
     vertical-align: baseline;
   }
 }
+
+
+body :not(#checkout-popup) > .woocommerce-Price-currencySymbol {
+    font-size: 0 !important;
+    display: none;
+}
+
+#checkout-popup .woocommerce-Price-currencySymbol, #checkout-popup .woocommerce-Price-amount bdi::after, .checkout .woocommerce-Price-amount bdi::after, .checkout .woocommerce-Price-currencySymbol {
+  display: none !important;
+}
+
+body :not(#checkout-popup) > .woocommerce-Price-amount bdi::after {
+    content: "pts"; /* Replace this with your symbol, e.g., "Credits" */
+    visibility: visible;
+    margin-left: 2px;
+}
