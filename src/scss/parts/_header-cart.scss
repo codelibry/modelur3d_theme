@@ -19,6 +19,10 @@
     justify-content: center;
     font-size: var(--size-xs);
     color: var(--color-white);
+
+    &.is-empty {
+      display: none;
+    }
   }
 
   &:after {

@@ -9,3 +9,11 @@
 .section-bottom {
   padding-bottom: 2.5rem;
 }
+
+.section:first-of-type {
+  padding-top: 8rem;
+
+  @include lg {
+    padding-top: 6rem;
+  }
+}

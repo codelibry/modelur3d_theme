@@ -4,12 +4,12 @@
         background-repeat: no-repeat;
         background-size: cover;
         padding: 0 rem(86);
-        min-height: rem(640);
+        min-height: rem(600);
         padding-top: rem(148) !important;
     }
 
     &__content {
-        max-width: 48%;
+        max-width: 48rem;
         color: var(--color-white);
         display: flex;
         flex-direction: column;
@@ -17,9 +17,9 @@
     }
 
     &__text {
-        max-width: 55%;
         p {
             color: var(--color-white);
+            text-wrap: balance;
         }
     }
 
@@ -28,14 +28,6 @@
     }
 
     @include lg {
-        &__content {
-            max-width: 85%;
-        }
-
-        &__text {
-            max-width: 70%;
-        }
-
         &__wrapper {
             padding: rem(80) rem(40);
             min-height: 100%;
