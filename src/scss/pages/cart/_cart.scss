@@ -6,6 +6,14 @@
   .woocommerce-page__title {
     text-align: left;
   }
+  
+  .rs_cart_message {
+    display: none;
+  }
+
+  .product-tab {
+    padding-bottom: 0;
+  }
 
   .cart-table-column {
     padding: 0;
@@ -34,6 +42,7 @@
   .wc-proceed-to-checkout {
     display: flex;
     justify-content: space-between;
+    gap: 8px;
     flex-wrap: wrap;
   }
 

@@ -7,7 +7,7 @@
 
   table {
     width: 100%;
-    padding: rem(40);
+
     background: var(--color-white);
   }
 
@@ -15,6 +15,7 @@
   tr th:first-child {
     text-align: left;
     width: 80%;
+    font-weight: var(--font-bold);
   }
 
   tr td:last-child,
@@ -22,9 +23,39 @@
     text-align: right;
   }
 
+  td .woocommerce-Price-amount{
+    font-size: var(--size-sm);
+    font-weight: var(--font-regular);
+  }
+
+  .cart-subtotal {
+    th, td {
+      padding-bottom: rem(30);
+      padding-top: rem(40);
+    }
+
+    th {
+      padding-left: rem(40);
+    }
+
+    td {
+      padding-right: rem(40);
+    }
+  }
+
   .order-total {
     th, td {
-      padding-top: rem(60);
+      padding-top: rem(30);
+      padding-bottom: rem(40);
+      border-top: 1.5px solid var(--color-bg);
+    }
+
+    th {
+      padding-left: rem(40);
+    }
+
+    td {
+      padding-right: rem(40);
     }
 
     th {
@@ -52,8 +83,42 @@
   }
 
   @include md {
-    table {
-      padding: rem(24);
+    .cart-subtotal {
+      th, td {
+        padding-bottom: rem(30);
+        padding-top: rem(24);
+      }
+
+      th {
+        padding-left: rem(24);
+      }
+
+      td {
+        padding-right: rem(24);
+      }
+    }
+
+    .order-total {
+      th, td {
+        padding-top: rem(30);
+        padding-bottom: rem(24);
+      }
+
+      th {
+        padding-left: rem(24);
+      }
+
+      td {
+        padding-right: rem(24);
+      }
+
+      th {
+        font-size: var(--size-md);
+      }
+
+      td .amount, td bdi{
+        font-size: var(--size-h5);
+      }
     }
   }
 

@@ -6,6 +6,7 @@
 
   input[type="number"] {
     text-align: center;
+    min-height: 32px;
 
     /* Remove number spin button for WebKit browsers */
     &::-webkit-outer-spin-button,
@@ -18,7 +19,8 @@
     &[type="number"] {
       -moz-appearance: textfield;
       border: none;
-      background-color: transparent
+      background-color: transparent;
+      padding: 0
     }
   }
 

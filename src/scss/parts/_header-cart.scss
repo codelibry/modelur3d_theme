@@ -45,6 +45,9 @@
   width: 360px;
   z-index: 10;
   display: none;
+  box-shadow: 0 12px 15px rgba(0, 0, 0, 0.241);
+  max-height: 50vh;
+  overflow-y: auto;
 
   &:has(.widget_shopping_cart_content:empty) {
     display: none !important;
@@ -73,6 +76,15 @@
 
         .mini-cart-title {
           line-height: 1;
+        }
+      }
+
+      .h6 a {
+        text-decoration: none;
+        font-size: var(--size-md);
+
+        &:hover {
+          text-decoration: underline;
         }
       }
 
