@@ -5,7 +5,9 @@
     <?php get_template_part('template-parts/header/mobile-menu') ?>
 
     <!-- Logo -->
-    <?php get_template_part('template-parts/header/logo') ?>
+    <div class="display-sm-none">
+      <?php get_template_part('template-parts/header/logo') ?>
+    </div>
 
     <!-- Menu -->
     <?php get_template_part('template-parts/header/menu') ?>
