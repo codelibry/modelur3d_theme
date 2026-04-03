@@ -8,20 +8,21 @@
   margin-inline: auto;
   padding-left: 1rem;
   padding-right: 1rem;
-  max-width: var(--container-md);
+  max-width: calc(var(--container-md) + 2rem);
+  --container-max-width: var(--container-md);
 }
 
 .container {
   @include container;
-  max-width: var(--container-md);
+  --container-max-width: var(--container-md);
 }
 
 .container-sm {
   @include container;
-  max-width: var(--container-sm);
+  --container-max-width: var(--container-sm);
 }
 
 .container-lg {
   @include container;
-  max-width: var(--container-lg);
+  --container-max-width: var(--container-lg);
 }

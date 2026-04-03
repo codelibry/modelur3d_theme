@@ -5,8 +5,8 @@
 
     .user-card {
         display: grid;
-        grid-template-columns: 16rem 1fr;
-        gap: 20px;
+        grid-template-columns: 13rem 1fr;
+        gap: 1.25rem;
 
         &__image {
             img {
