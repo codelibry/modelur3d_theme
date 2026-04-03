@@ -42,16 +42,6 @@ main {
   outline-offset: 0.2lh;
 }
 
-a:has(img) > img {
-	transition: var(--transition-base);
-	filter: none;
-}
-
 .woocommerce-message, .woocommerce-error, .woocommerce-info {
   color: var(--color-black);
-}
-
-a:has(img):hover > img,
-a:has(img):focus-visible > img {
-	filter: grayscale(100%);
 }

@@ -18,7 +18,7 @@ $attributes = $product->get_attributes();
 
 <li <?php wc_product_class( 'product-card', $product ); ?>>
 
-    <div class="product-card__thumbnail">
+    <a href="<?php echo esc_url( $permalink ); ?>" aria-label="<?php echo esc_attr( $title ); ?>" class="product-card__thumbnail">
         <?php if ( $image_id ) : ?>
 
             <?php echo wp_get_attachment_image( $image_id, 'medium', false, [ 'loading' => 'lazy' ] ); ?>
@@ -49,10 +49,10 @@ $attributes = $product->get_attributes();
             <?php endif; ?>
         <?php endif; ?>
 
-        <a class="product-card__icon-link" href="<?php echo esc_url( $permalink ); ?>" aria-label="<?php echo esc_attr( $title ); ?>">
+        <div class="product-card__icon-link">
             <?php echo get_inline_svg( 'go-to' ); ?>
-        </a>
-    </div>
+        </div>
+    </a>
 
     <?php
     $attr_items = [];

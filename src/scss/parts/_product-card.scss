@@ -8,11 +8,11 @@
    * Spacings
    */
   & > * {
-    margin-bottom: rem(20);
+    margin-bottom: 0.5rem;
   }
 
   &__title {
-    margin-bottom: rem(32);
+    margin-bottom: 1.5rem;
 
     // restrict title lines count
     display: -webkit-box;
@@ -41,9 +41,27 @@
 		aspect-ratio: 1 / 1;
 		overflow: hidden;
 		width: 100%;
-    margin-bottom: rem(40);
+    margin-bottom: 1.5rem;
     position: relative;
     height: 310px;
+
+    img {
+      transition: var(--transition-base);
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+
+      rect {
+        fill: var(--color-black) !important;
+      }
+
+      path {
+        stroke: var(--color-white) !important;
+      }
+    }
 
     .product-card__icon-link {
       position: absolute;
@@ -52,17 +70,6 @@
       
       rect, path, svg {
         transition: var(--transition-base);
-      }
-
-      &:hover {
-
-        rect {
-          fill: var(--color-black) !important;
-        }
-
-        path {
-          stroke: var(--color-white) !important;
-        }
       }
     }
 	}
@@ -81,6 +88,7 @@
 
   &__attrs {
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
     overflow: hidden;
     gap: 4px;
