@@ -45,3 +45,28 @@ main {
 .woocommerce-message, .woocommerce-error, .woocommerce-info {
   color: var(--color-black);
 }
+
+main.menu-blur {
+  filter: blur(10px);
+  transition: filter .3s ease;
+}
+
+body:has(.menu-blur) {
+  .header__woo-links {
+    filter: blur(10px);
+    transition: filter .3s ease;
+  }
+
+  .header__inner  {
+    background: transparent;
+  }
+
+  .header__logo {
+        filter: blur(10px);
+    transition: filter .3s ease;
+  }
+}
+
+.mobile-menu__menu .header__logo {
+  filter: none !important;
+}

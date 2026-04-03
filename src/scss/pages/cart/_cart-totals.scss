@@ -82,6 +82,10 @@
 
   .button {
     margin-top: rem(40);
+
+    @include md {
+      margin-top: rem(12);
+    }
   }
 
   @include md {

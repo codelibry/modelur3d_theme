@@ -170,14 +170,14 @@ if ( isset( $_POST['change_password_nonce'] ) && wp_verify_nonce( $_POST['change
 				<input aria-required="true" type="text" name="account_first_name" id="account_first_name" value="<?php echo esc_attr( $customer->get_first_name() ); ?>" />
 			</p>
 			<p class="woocommerce-form-row form-row">
-				<label class="required_field" for="billing_phone"><?php esc_html_e( 'Phone number', 'woocommerce' ); ?></label>
-        <span class="required" aria-hidden="true">*</span>
-				<input aria-required="true" type="text" name="billing_phone" id="billing_phone" value="<?php echo esc_attr( $customer->get_billing_phone() ); ?>" />
-			</p>
-			<p class="woocommerce-form-row form-row">
 				<label class="required_field" for="account_last_name"><?php esc_html_e( 'Last name', 'woocommerce' ); ?></label>
         <span class="required" aria-hidden="true">*</span>
 				<input aria-required="true" type="text" name="account_last_name" id="account_last_name" value="<?php echo esc_attr( $customer->get_last_name() ); ?>" />
+			</p>
+			<p class="woocommerce-form-row form-row">
+				<label class="required_field" for="billing_phone"><?php esc_html_e( 'Phone number', 'woocommerce' ); ?></label>
+        <span class="required" aria-hidden="true">*</span>
+				<input aria-required="true" type="text" name="billing_phone" id="billing_phone" value="<?php echo esc_attr( $customer->get_billing_phone() ); ?>" />
 			</p>
 			<p class="woocommerce-form-row form-row">
 				<label for="account_activity"><?php esc_html_e( 'Type of activity', 'woocommerce' ); ?></label>
@@ -284,6 +284,11 @@ if ( isset( $_POST['change_password_nonce'] ) && wp_verify_nonce( $_POST['change
 				'custom_attributes' => [ 'autocomplete' => 'new-password' ],
 			] );
 			?>
+			<p>
+				<button type="submit" class="button" name="save_password" value="<?php esc_attr_e( 'Save changes', 'woocommerce' ); ?>">
+					<?php esc_html_e( 'Change Password', 'woocommerce' ); ?>
+				</button>
+			</p>
 		</form>
 	</div>
 	

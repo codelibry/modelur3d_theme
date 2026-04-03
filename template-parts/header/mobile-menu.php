@@ -21,6 +21,10 @@
             'theme_location' => 'mobile-menu',
          ]);
         ?>
+        <!-- My Account -->
+         <div class="login-register ">
+        <?php get_template_part('template-parts/header/login') ?>
+         </div>
       </div>
     </div>
   </div>

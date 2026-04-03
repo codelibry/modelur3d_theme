@@ -66,12 +66,12 @@
 
     .cart-item-meta {
       display: flex;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       font-size: var(--size-sm);
       color: var(--color-dark);
-      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      gap: 8px;
     }
 
   }

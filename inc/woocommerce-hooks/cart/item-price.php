@@ -1,7 +1,7 @@
 <?php
 /**
  * Add product attributes and categories below the product name in the cart.
- * Each item separated by a middle dot ·
+ * Each value as a separate item separated by a middle dot ·
  */
 add_filter( 'woocommerce_cart_item_name', 'custom_cart_item_meta_after_name', 10, 3 );
 
@@ -18,7 +18,7 @@ function custom_cart_item_meta_after_name( $product_name, $cart_item, $cart_item
     $categories = wc_get_product_terms( $product->get_id(), 'product_cat', [ 'fields' => 'names' ] );
 
     if ( ! empty( $categories ) ) {
-        $items[] = implode( ' | ', $categories );
+        array_push( $items, ...$categories );
     }
 
     // 2. Attributes
@@ -35,7 +35,7 @@ function custom_cart_item_meta_after_name( $product_name, $cart_item, $cart_item
         }
 
         if ( ! empty( $values ) ) {
-            $items[] = implode( ' | ', $values );
+            array_push( $items, ...$values );
         }
     }
 

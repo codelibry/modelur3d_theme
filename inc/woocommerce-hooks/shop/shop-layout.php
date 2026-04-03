@@ -52,7 +52,7 @@ remove_action( 'woocommerce_no_products_found', 'wc_no_products_found' );
 add_action( 'woocommerce_no_products_found', function() { ?>
 	<div class="shop-products">
 		<div class="woof_products_top_panel"></div>
-		<div class="shop-top-bar | repel"><?php echo do_shortcode('[custom_filter]') ?><?php echo do_shortcode('[active_filters]') ?></div>
+		<div class="shop-top-bar | repel"><h2>Our collection</h2><?php echo do_shortcode('[custom_filter]') ?><?php echo do_shortcode('[active_filters]') ?></div>
 		<div class="woocommerce-info">No products were found matching your selection.</div>
 	</div>
 <?php }, 15);

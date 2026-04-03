@@ -10,5 +10,14 @@ main .woocommerce-page {
   @include md {
     padding-top: 8rem;
     padding-bottom: rem(60);
+
+      
+    &__title {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @include sm {
+    padding-top: 5rem;
   }
 }

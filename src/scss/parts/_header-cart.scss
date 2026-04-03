@@ -58,7 +58,6 @@
     flex-direction: column;
     gap: 12px;
     padding: 0 10px 0 0;
-    max-height: calc(100vh - 300px);
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -67,6 +66,7 @@
         display: grid;
         grid-template-columns: 60px 1fr 14px;
         gap: 12px;
+        position: relative;
       }
 
       .mini-cart-info {

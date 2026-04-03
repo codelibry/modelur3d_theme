@@ -15,7 +15,7 @@ function custom_checkout_end_block() {
     ?>
     <div class="custom-checkout-footer-block | box">
         <div class="checkout-footer-content">
-            <h2><?php esc_html_e( 'Payment method', 'woocommerce' ); ?></h2>    
+            <h2><?php esc_html_e( 'Balance', 'woocommerce' ); ?></h2>    
               <div class="balance">
                   <?php echo get_inline_svg('wallet'); ?>
                   <span>Balance</span>

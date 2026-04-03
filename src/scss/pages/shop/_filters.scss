@@ -23,6 +23,7 @@
       }
     }
   }
+  
 
   &__label-arrow {
     position: relative;
@@ -34,6 +35,24 @@
     overflow-y: auto;
     background: var(--color-white);
     border-top: 1px solid var(--color-light);
+  }
+
+  .is-checked {
+    .cf-filter__radio-dot {
+      border-color: var(--color-dark);
+
+      &::after {
+        background: var(--color-dark);
+      }
+    }
+  }
+
+  @include md {
+    width: 100%;
+
+    &__group {
+      width: 100%;
+    }
   }
 
 }
@@ -57,7 +76,9 @@
       color: var(--color-white);
     }
   }
+
 }
+
 
 .shop-top-bar {
   align-items: flex-start;

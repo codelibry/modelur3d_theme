@@ -9,12 +9,12 @@ $display_popup = get('header__login-popup', $options = true);
 
     <!-- Display link to Login Popup -->
     <?php if(is_user_logged_in()): ?>
-      <a href="<?php echo $account_link ?>">
+      <a class="login-btn" href="<?php echo $account_link ?>">
         <?php echo get_inline_svg('account-icon') ?>
         <span class="visually-hidden"><?php esc_html_e('My account', 'codelibry') ?></span>
       </a>
     <?php else: ?>
-      <a class="button button--secondary" href="#popup-login-form">
+      <a class="button button--secondary login-btn" href="#popup-login-form">
         <?php esc_html_e('Sign Up', 'codelibry') ?>
       </a>
     <?php endif; ?>

@@ -8,10 +8,10 @@ if ( empty( $product ) || ! $product->is_visible() ) {
     return;
 }
 
-$image_id  = $product->get_image_id();
-$title     = $product->get_name();
-$price     = $product->get_price();
-$permalink = get_permalink( $product->get_id() );
+$image_id   = $product->get_image_id();
+$title      = $product->get_name();
+$price      = $product->get_price();
+$permalink  = get_permalink( $product->get_id() );
 $attributes = $product->get_attributes();
 
 ?>
@@ -25,7 +25,6 @@ $attributes = $product->get_attributes();
 
         <?php else : ?>
             <?php
-            // Cast to int — the option can return "0" (string) which is truthy
             $placeholder_id  = (int) get_option( 'woocommerce_placeholder_image', 0 );
             $placeholder_src = wc_placeholder_img_src( 'medium' );
             ?>
@@ -61,20 +60,19 @@ $attributes = $product->get_attributes();
         if ( ! $attribute->get_visible() ) continue;
 
         if ( $attribute->is_taxonomy() ) {
-            $terms  = wc_get_product_terms( $product->get_id(), $attribute->get_name(), [ 'fields' => 'names' ] );
-            $values = $terms;
+            $values = wc_get_product_terms( $product->get_id(), $attribute->get_name(), [ 'fields' => 'names' ] );
         } else {
             $values = $attribute->get_options();
         }
 
         if ( ! empty( $values ) ) {
-            $attr_items[] = implode( ' | ', $values );
+            array_push( $attr_items, ...$values );
         }
     }
 
     $categories = wc_get_product_terms( $product->get_id(), 'product_cat', [ 'fields' => 'names' ] );
     if ( ! empty( $categories ) ) {
-        array_unshift( $attr_items, implode( ' | ', $categories ) );
+        array_unshift( $attr_items, ...$categories );
     }
     ?>
 
