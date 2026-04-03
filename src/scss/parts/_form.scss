@@ -82,8 +82,12 @@ label {
 /*
  * Search Select Field
  */
+select {
+  max-height: 62px
+}
 .select2 {
   @include input;
+  max-height: 72px;
   
   li {
     margin-bottom: 0;

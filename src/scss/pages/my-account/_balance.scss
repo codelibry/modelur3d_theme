@@ -71,6 +71,10 @@
     }
 }
 
+.rmp-col-description{
+    display: none;
+}
+
 .rmp-withdraw-block {
     border: none;
 
@@ -93,5 +97,16 @@
             margin-top: 0 !important;
             margin-left: auto;
         }
+    }
+
+}
+
+#checkout-popup {
+    .popup {
+        padding: 0;
+    }  
+
+    .rs_checkout_message, .rs_cart_message, .custom-checkout-footer-block, .sumo_available_points {
+        display: none;
     }
 }

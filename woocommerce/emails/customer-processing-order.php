@@ -1,8 +1,8 @@
 <?php
 /**
- * Admin new order email
+ * Customer processing order email
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/emails/admin-new-order.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/emails/customer-processing-order.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -11,13 +11,15 @@
  * the readme will list any important changes.
  *
  * @see https://woocommerce.com/document/template-structure/
- * @package WooCommerce\Templates\Emails\HTML
+ * @package WooCommerce\Templates\Emails
  * @version 10.4.0
  */
 
 use Automattic\WooCommerce\Utilities\FeaturesUtil;
 
-defined( 'ABSPATH' ) || exit;
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 $email_improvements_enabled = FeaturesUtil::feature_is_enabled( 'email_improvements' );
 
@@ -26,21 +28,25 @@ $email_improvements_enabled = FeaturesUtil::feature_is_enabled( 'email_improveme
  */
 do_action( 'woocommerce_email_header', $email_heading, $email ); ?>
 
+<?php echo $email_improvements_enabled ? '<div class="email-introduction">' : ''; ?>
+<p>
 <?php
-echo $email_improvements_enabled ? '<div class="email-introduction">' : '';
-
-$text = __( 'You’ve received the following order from %s:', 'woocommerce' );
-
-if ( $email_improvements_enabled ) {
-    /* translators: %s: Customer billing full name */
-    $text = __( 'You’ve received a new order from %s:', 'woocommerce' );
+if ( ! empty( $order->get_billing_first_name() ) ) {
+	/* translators: %s: Customer first name */
+	printf( esc_html__( 'Hi %s,', 'woocommerce' ), esc_html( $order->get_billing_first_name() ) );
+} else {
+	printf( esc_html__( 'Hi,', 'woocommerce' ) );
 }
-
-// Append the new text here
-// Use \n or <br> depending on whether you want a new line in the email
-$text .= '              ' . __( 'Your order will be received in 48 hours.', 'woocommerce' );
 ?>
-<p><?php printf( esc_html( $text ), esc_html( $order->get_formatted_billing_full_name() ) ); ?></p>
+</p>
+<?php if ( $email_improvements_enabled ) : ?>
+	<p><?php esc_html_e( 'Just to let you know &mdash; we’ve received your order, and it is now being processed.', 'woocommerce' ); ?></p>
+	<p><?php esc_html_e( 'Here’s a reminder of what you’ve ordered:', 'woocommerce' ); ?></p>
+<?php else : ?>
+	<?php /* translators: %s: Order number */ ?>
+	<p><?php printf( esc_html__( 'Just to let you know &mdash; we\'ve received your order #%s, and it is now being processed:', 'woocommerce' ), esc_html( $order->get_order_number() ) ); ?></p>
+	<p><?php printf( esc_html__( 'Order processing takes up to 48 hours', 'woocommerce' ), esc_html( $order->get_order_number() ) ); ?></p>
+<?php endif; ?>
 <?php echo $email_improvements_enabled ? '</div>' : ''; ?>
 
 <?php

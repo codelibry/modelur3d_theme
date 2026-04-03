@@ -13,8 +13,8 @@ $icon_map = [
 	'customer-logout'    => 'logout',
 	'submit-product'     => 'selling', 
 	'my-submissions'     => 'my-3d', 
-	'my-products'        => 'my-3d', 
-	'my-withdrawals'        => 'my-3d', 
+	'my-products'        => 'sold', 
+	'my-withdrawals'        => 'oper', 
 	'add_balance'        => 'wallet'
 ];
 ?>

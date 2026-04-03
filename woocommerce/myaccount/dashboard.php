@@ -259,35 +259,31 @@ if ( isset( $_POST['change_password_nonce'] ) && wp_verify_nonce( $_POST['change
 		<form method="post" action="" class="account-form account-form--password ">
 			<?php wp_nonce_field( 'change_password_action', 'change_password_nonce' ); ?>
 			
-			<p class="woocommerce-form-row form-row form-row-wide">
-				<label class="required_field" for="password_current">
-					<?php esc_html_e( 'Old password', 'woocommerce' ); ?>
-				</label>
-        <span class="required" aria-hidden="true">*</span>
-				<input aria-required="true" type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_current" id="password_current" autocomplete="current-password" />
-			</p>
-			
-			<p class="woocommerce-form-row form-row form-row-wide">
-				<label class="required_field" for="password_1">
-					<?php esc_html_e( 'New password', 'woocommerce' ); ?>
-				</label>
-        <span class="required" aria-hidden="true">*</span>
-				<input aria-required="true" type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_1" id="password_1" autocomplete="new-password" />
-			</p>
-			
-			<p class="woocommerce-form-row form-row form-row-wide">
-				<label class="required_field" for="password_2">
-					<?php esc_html_e( 'Confirm password', 'woocommerce' ); ?>
-				</label>
-        <span class="required" aria-hidden="true">*</span>
-				<input aria-required="true" type="password" class="woocommerce-Input woocommerce-Input--password input-text" name="password_2" id="password_2" autocomplete="new-password" />
-			</p>
-			
-			<p>
-				<button type="submit" class="button" name="save_password" value="1">
-					<?php esc_html_e( 'Save', 'woocommerce' ); ?>
-				</button>
-			</p>
+			<?php
+			woocommerce_form_field( 'password_current', [
+				'type'        => 'password',
+				'label'       => __( 'Current Password', 'woocommerce' ),
+				'required'    => true,
+				'class'       => [ 'form-row-wide' ],
+				'custom_attributes' => [ 'autocomplete' => 'current-password' ],
+			] );
+
+			woocommerce_form_field( 'password_1', [
+				'type'        => 'password',
+				'label'       => __( 'New Password', 'woocommerce' ),
+				'required'    => true,
+				'class'       => [ 'form-row-wide' ],
+				'custom_attributes' => [ 'autocomplete' => 'new-password' ],
+			] );
+
+			woocommerce_form_field( 'password_2', [
+				'type'        => 'password',
+				'label'       => __( 'Confirm New Password', 'woocommerce' ),
+				'required'    => true,
+				'class'       => [ 'form-row-wide' ],
+				'custom_attributes' => [ 'autocomplete' => 'new-password' ],
+			] );
+			?>
 		</form>
 	</div>
 	

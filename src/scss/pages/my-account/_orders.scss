@@ -40,3 +40,19 @@
     gap: 0.5rem;
   }
 }
+
+.woocommerce-view-order {
+  .woocommerce-MyAccount-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  td {
+    text-align: center;
+  }
+}

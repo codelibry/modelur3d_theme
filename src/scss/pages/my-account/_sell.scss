@@ -17,6 +17,12 @@
         background: var(--color-white);
     }
 
+    @include sm {
+        #rmp-submissions-list {
+            padding: rem(12);
+        }
+    }
+
 
 .woocommerce-orders-table.rmp-table {
     display: block;

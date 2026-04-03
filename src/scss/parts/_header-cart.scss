@@ -89,19 +89,15 @@
       }
 
       .mini-cart-remove a {
-        display: block;
-        font-size: 0;
-        width: 16px;
-        height: 16px;
-        color: transparent;
-        background-repeat: no-repeat;
-        background-size: 16px;
-        background-position: top right;
-        margin-left: auto;
-        transform-origin: center;
+        font-size: 26px;
+        position: absolute;
+        top: 0;
+        color: var(--color-black);
+        text-decoration: none;
 
         &:hover {
           transform: scale(1.15);
+          text-decoration: underline;
         }
       }
 
