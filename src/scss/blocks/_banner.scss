@@ -17,9 +17,10 @@
     }
 
     &__text {
+        max-width: rem(400);
+
         p {
             color: var(--color-white);
-            text-wrap: balance;
         }
     }
 

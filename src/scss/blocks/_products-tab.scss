@@ -1,12 +1,10 @@
 .product-tab {
     &__panel {
         display: none;
-         
 
         &.is-active {
             display: block;
         }
-
     }
 
     &__top {
@@ -26,8 +24,6 @@
     flex-wrap: wrap;
 
     &__btn {
-        
-
         &.is-active {
             background: var(--color-black);
             color: var(--color-white);
