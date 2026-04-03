@@ -1,5 +1,6 @@
 .footer {
   color: var(--color-dark);
+  margin-bottom: 4.375rem;
 
   .box {
     background-color: var(--color-white);
@@ -56,6 +57,10 @@
       font-weight: var(--font-extra-bold);
       font-size: var(--size-sm);
     }
+
+    & > * + * {
+      margin-top: 0.5rem;
+    }
   }
 
   &__column {
@@ -84,6 +89,8 @@
   }
 
   @include lg {
+    margin-bottom: 2.5rem;
+
     &__main {
       flex-wrap: wrap;
     }
