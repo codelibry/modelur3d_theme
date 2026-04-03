@@ -35,7 +35,7 @@ add_action( 'init', function() {
 add_action( 'woocommerce_after_cart_totals', function() { ?>
     <div class="wc-proceed-to-checkout">
         <a href="<?php echo esc_url( wc_get_page_permalink( 'shop' ) ); ?>" class="button">
-            <?php esc_html_e( 'Continue Shopping', 'your-textdomain' ); ?>
+            <?php esc_html_e( 'Continue Shopping', 'codelibry' ); ?>
         </a>
         <?php woocommerce_button_proceed_to_checkout(); ?>
     </div>

@@ -33,6 +33,7 @@
 }
 
 .single-product-wrapper {
+  padding-top: 0 !important;
   padding-bottom: rem(80);
 
   @include md {

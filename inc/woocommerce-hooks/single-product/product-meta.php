@@ -18,7 +18,7 @@ function custom_product_meta_block() {
         $category_names = wp_list_pluck( $category_terms, 'name' );
 
         $rows[] = [
-            'label' => __( 'Categories', 'your-textdomain' ),
+            'label' => __( 'Categories', 'codelibry' ),
             'value' => implode( ' | ', $category_names ),
         ];
     }
@@ -65,7 +65,7 @@ function custom_product_meta_block() {
     }
 
     echo '<div class="custom-product-meta-block">';
-    echo '<h4 class="custom-product-meta-block__title">' . esc_html__( 'Product Details', 'your-textdomain' ) . '</h4>';
+    echo '<h4 class="custom-product-meta-block__title">' . esc_html__( 'Details', 'codelibry' ) . '</h4>';
 
     foreach ( $rows as $row ) {
         echo '<div class="custom-product-meta-block__row">';
