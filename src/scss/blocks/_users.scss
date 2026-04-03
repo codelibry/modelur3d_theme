@@ -17,10 +17,14 @@
         &__content {
             background-color: var(--color-white);
             padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
 
-            & > * + * {
-              margin-top: 2.5rem;
-            }
+        .button {
+          margin-top: auto;
+          width: fit-content;
         }
 
         @include md {
