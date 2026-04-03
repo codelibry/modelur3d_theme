@@ -18,33 +18,8 @@
 	/*
 	 * Zoom Mode Button
 	 */
-	&__trigger {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    aspect-ratio: 1 / 1;
-    width: 2.5rem;
-    height: 2.5rem;
-    display: grid;
-    place-items: center;
-    background: var(--color-black);
-		transition: var(--transition-base);
-	}
-
 	&__trigger span {
 		display: none;
-	}
-	
-	&__trigger::after {
-		content: url('../../assets/icons/zoom.svg');
-		display: block;
-		width: 50%;
-		height: 50%;
-	}
-
-	&__trigger:hover {
-		opacity: 0.8;
 	}
 
 

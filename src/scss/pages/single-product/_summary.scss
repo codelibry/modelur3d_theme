@@ -51,7 +51,7 @@
     }
 
     &__row {
-      padding: rem(20);
+      padding: 1rem 1.25rem;
       display: flex;
       justify-content: space-between;
       font-size: var(--size-sm);
@@ -64,7 +64,7 @@
     }
 
     &__row:nth-child(even) {
-      background: var(--color-white);
+      background: var(--color-light);
     }
   }
 
