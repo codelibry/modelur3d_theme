@@ -74,9 +74,17 @@
    * Attributes
    */
 
+  &__attrs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    gap: 4px;
+  }
+
   &__attr {
     font-size: var(--size-sm);
     color: var(--color-dark);
+    width: fit-content;
   }
 
   /*

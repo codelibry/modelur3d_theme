@@ -7,6 +7,8 @@
 
     h2,h3 {
         margin-bottom: 40px;
+        color: var(--color-black);
+        font-weight: var(--font-bold);
     }
 
     & > .lost_password{
@@ -19,6 +21,11 @@
 
     .lost-rem {
         margin-top: rem(8);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 8px;
     }
 
     .lost_password {
@@ -50,13 +57,14 @@
 
 .account-switcher-wrapper {
     text-align: center;
-    font-weight: var(--font-extra-bold);
+    font-weight: var(--font-regular);
     margin-top: rem(40);
 
     a {
         color: var(--color-black);
         text-decoration: none;
         transition: var(--transition-base);
+        font-weight: var(--font-extra-bold);
 
         &:hover {
             color: var(--color-dark);
@@ -68,7 +76,7 @@
     width: fit-content;
     margin-inline: auto;
     display: block;
-    margin-top: 40px;
+    margin-top: 40px !important;
     --button-bg: var(--color-black);
     --button-text: var(--color-white);
     --focus-color: var(--color-dark);
