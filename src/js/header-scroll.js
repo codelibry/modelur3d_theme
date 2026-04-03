@@ -2,6 +2,6 @@ const header = document.querySelector('.header');
 
 if (header) {
   window.addEventListener('scroll', () => {
-    header.classList.toggle('header-scroll', window.scrollY > 600);
+    header.classList.toggle('header-scroll', window.scrollY > 200);
   }, {passive: true});
 }
