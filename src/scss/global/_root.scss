@@ -72,7 +72,8 @@
   /*
    * Containers Width
    */
-  --container-sm: 800px;    /* Used for Content Pages ("Privacy Policy", "Cookie Policy") */
+  --container-xs: 800px;    /* FAQ */
+  --container-sm: 1055px;   /* Used for Content Pages ("Privacy Policy", "Cookie Policy") */
   --container-md: 1336px;   /* The most common container width */
   --container-lg: 1440px;   /* Can be used for wider Header or Footer */
 

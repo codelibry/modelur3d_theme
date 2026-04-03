@@ -17,6 +17,11 @@
   --container-max-width: var(--container-md);
 }
 
+.container-xs {
+  @include container;
+  --container-max-width: var(--container-xs);
+}
+
 .container-sm {
   @include container;
   --container-max-width: var(--container-sm);

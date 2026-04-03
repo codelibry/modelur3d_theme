@@ -17,7 +17,7 @@ if ( ! empty( $items ) ) {
 ?>
 
 <section class="faq | section"<?php echo $anchor_id ? ' id="' . esc_attr( $anchor_id ) . '"' : ''; ?>>
-    <div class="container-sm">
+    <div class="container-xs">
 
         <?php if ( $title ) : ?>
             <div class="faq__title">

@@ -17,7 +17,7 @@ if ($image_id) {
 
 ?>
 
-<section class="banner | section"<?php echo $anchor_id ? ' id="' . esc_attr($anchor_id) . '"' : ''; ?>>
+<section class="banner | section-bottom"<?php echo $anchor_id ? ' id="' . esc_attr($anchor_id) . '"' : ''; ?>>
     <div class="container ">
         <div class="banner__wrapper"<?php echo $bg_style; ?>">
             <div class="banner__content">

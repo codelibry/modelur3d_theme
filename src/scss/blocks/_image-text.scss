@@ -14,9 +14,7 @@
     }
 
     &__img {
-        width: 100%;
-        height: 100%;
-        display: block;
+        @include image-cover;
     }
 
     &__content {
@@ -68,6 +66,10 @@
 
         &__content {
             padding: rem(24);
+        }
+
+        &__img {
+            height: 300px;
         }
     }
 }
