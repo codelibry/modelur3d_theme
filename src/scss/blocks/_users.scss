@@ -1,67 +1,34 @@
 .users-section {
-
     .grid {
         --gap: 30px;
     }
 
     .user-card {
-        display: flex;
+        display: grid;
+        grid-template-columns: 16rem 1fr;
         gap: 20px;
 
         &__image {
-            flex: 0.4;
-            height: 100%;
-
             img {
-                width: 100%;
-                height: 100%;
+              @include image-cover;
             }
         }
 
         &__content {
             background-color: var(--color-white);
-            padding: rem(40);
-            display: flex;
-            flex-direction: column;
-            gap: rem(40);
-            flex: 0.6;
-        }
+            padding: 2.5rem;
 
-        .button {
-            width: fit-content;
-        }
-    }
-
-    @include lg {
-        .user-card {
-            max-height: rem(320);
-            
-            &__image {
-                flex: 0.2;
-            }
-
-            &__content {
-                flex: 0.8;
+            & > * + * {
+              margin-top: 2.5rem;
             }
         }
-    }
 
-    @include md {
-        .user-card {
-            flex-direction: column;
-            max-height: 100%;
+        @include md {
+          grid-template-columns: 1fr;
 
-             &__image, &__content {
-                flex: 1;
-             }
-
-             &__image {
-                max-height: 20rem;
-
-                img {
-                    width: auto;
-                }
-             }
+          &__image {
+            height: 300px;
+          }
         }
     }
 }
