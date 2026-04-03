@@ -5,8 +5,8 @@ $title = get_array_value($args, 'product-tab-title', get('product-tab-title'));
 $tabs = [
     'bestseller'      => ['label' => 'Bestsellers',     'query' => ['meta_key' => 'total_sales', 'orderby' => 'meta_value_num', 'order' => 'DESC']],
     'top_rated'       => ['label' => 'Top Rated',       'query' => ['meta_key' => '_wc_average_rating', 'orderby' => 'meta_value_num', 'order' => 'DESC']],
-    'all'             => ['label' => 'All',              'query' => ['orderby' => 'date', 'order' => 'DESC']],
-    'recently_added'  => ['label' => 'Recently Added',  'query' => ['orderby' => 'date', 'order' => 'DESC', 'date_query' => [['after' => '30 days ago']]]],
+    'recently_added'  => ['label' => 'Hot Drop',        'query' => ['orderby' => 'date', 'order' => 'DESC', 'date_query' => [['after' => '30 days ago']]]],
+    'all'             => ['label' => 'Show All',        'query' => ['orderby' => 'date', 'order' => 'DESC']],
 ];
 
 $active_tab = isset($_GET['tab']) && array_key_exists($_GET['tab'], $tabs) ? sanitize_key($_GET['tab']) : 'all';
