@@ -36,22 +36,8 @@ add_action( 'woocommerce_before_shop_loop', function() {
 	?>
 	<div class="shop-top-bar | repel">
 		<h2>Our collection</h2>
-		<div class="shop-custom-filters">
-            <a href="<?php echo add_query_arg('orderby', 'popularity', $shop_url); ?>" 
-               class="button <?php echo ($current_orderby == 'popularity') ? 'is-active' : ''; ?>">
-               Best Selling
-            </a>
-            
-            <a href="<?php echo add_query_arg('orderby', 'rating', $shop_url); ?>" 
-               class="button <?php echo ($current_orderby == 'rating') ? 'is-active' : ''; ?>">
-               Top Rated
-            </a>
-            
-            <a href="<?php echo add_query_arg('orderby', 'date', $shop_url); ?>" 
-               class="button <?php echo ($current_orderby == 'date') ? 'is-active' : ''; ?>">
-               Recently Added
-            </a>
-        </div>
+		<?php echo do_shortcode('[custom_filter]') ?>
+		<?php echo do_shortcode('[active_filters]') ?>
 <?php }, 15);
 
 add_action( 'woocommerce_before_shop_loop', function() { ?>
@@ -66,7 +52,7 @@ remove_action( 'woocommerce_no_products_found', 'wc_no_products_found' );
 add_action( 'woocommerce_no_products_found', function() { ?>
 	<div class="shop-products">
 		<div class="woof_products_top_panel"></div>
-		<div class="shop-top-bar | repel"></div>
+		<div class="shop-top-bar | repel"><?php echo do_shortcode('[custom_filter]') ?><?php echo do_shortcode('[active_filters]') ?></div>
 		<div class="woocommerce-info">No products were found matching your selection.</div>
 	</div>
 <?php }, 15);

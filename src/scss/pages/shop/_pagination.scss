@@ -1,5 +1,5 @@
 .woocommerce-pagination {
-  padding: rem(120) 0;
+  padding-top: rem(120);
 
 	ul.page-numbers {
 		display: flex;
@@ -54,6 +54,6 @@
 	}
 
 	@include md {
-		padding: rem(60) 0;
+		padding-top: rem(60);
 	}
 }

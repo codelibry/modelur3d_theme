@@ -33,11 +33,12 @@
    * Product Image
    */
 	&__thumbnail {
-		aspect-ratio: 5 / 6;
+		aspect-ratio: 1 / 1;
 		overflow: hidden;
 		width: 100%;
     margin-bottom: rem(40);
     position: relative;
+    height: 310px;
 
     .product-card__icon-link {
       position: absolute;
@@ -93,6 +94,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 0;
 
     br {
       display: none;
