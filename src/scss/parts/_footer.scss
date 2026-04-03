@@ -1,6 +1,10 @@
 .footer {
   color: var(--color-dark);
 
+  .box {
+    background-color: var(--color-white);
+  }
+
   &__inner {
     --flow-space: 2rem;
   }
@@ -34,6 +38,8 @@
     align-items: flex-start;
     column-gap: 1rem;
     row-gap: 2rem;
+    max-width: 600px;
+    width: 100%;
 
     h4 {
       font-size: var(--size-md);
@@ -54,6 +60,8 @@
 
   &__column {
     --flow-space: 40px;
+    max-width: 200px;
+    width: 100%;
   }
 
   &__payments {
@@ -61,6 +69,7 @@
     
     img {
       height: 100%;
+      object-fit: contain;
     }
   }
 
