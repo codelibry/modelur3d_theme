@@ -7,7 +7,7 @@ add_action( 'woocommerce_register_form', function() { ?>
 
     <p class="form-row form-row-wide">
       <label for="reg_password2"><?php esc_html_e( 'Confirm Password', 'woocommerce' ); ?> <span class="required">*</span></label>
-      <span class="password-input"><input type="password" class="input-text" name="password2" id="reg_password2" autocomplete="new-password" required/></span>
+      <input type="password" class="input-text woocommerce-Input" name="password2" id="reg_password2" autocomplete="new-password" required/>
     </p>
   
 <?php });

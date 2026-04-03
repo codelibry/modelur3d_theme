@@ -118,7 +118,9 @@ function rs_separate_registration_form() {
     $xpath = new DOMXPath($dom);
     $forms = $xpath->query('//form[contains(@class,"register")]');
     if ($forms->length > 0) {
+        echo '<div class="woocommerce">';
         echo $dom->saveHTML($forms->item(0));
+        echo '</div>';
     } else {
         echo '<p>Registration form not found.</p>';
     }
@@ -166,9 +168,11 @@ add_shortcode( 'wc_login_form_rs', function() {
     rs_display_stored_notices('login');
     remove_action( 'woocommerce_before_customer_login_form', 'woocommerce_output_all_notices', 10 );
     do_action( 'woocommerce_before_customer_login_form' );
+    echo '<div class="woocommerce">';
     woocommerce_login_form( array(
         'redirect' => wc_get_page_permalink( 'myaccount' )
     ) );
+    echo '</div>';
     return ob_get_clean();
 });
 
