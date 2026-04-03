@@ -1,5 +1,6 @@
 <?php
 
+$anchor_id = get_array_value($args, 'anchor-id', get('anchor-id'));
 $title    = get_array_value($args, 'testimonials-title', get('testimonials-title'));
 $subtitle = get_array_value($args, 'testimonials-subtitle', get('testimonials-subtitle'));
 $button   = get_array_value($args, 'testimonials-button', get('testimonials-button'));
@@ -16,7 +17,7 @@ if (empty($testimonials)) {
 
 ?>
 
-<section class="testimonials | section">
+<section class="testimonials | section"<?php echo $anchor_id ? ' id="' . esc_attr($anchor_id) . '"' : ''; ?>>
     <div class="container">
 
         <?php get_template_part('template-parts/parts/section-header', null, [

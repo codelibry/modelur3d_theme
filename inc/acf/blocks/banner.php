@@ -2,6 +2,7 @@
 
 function codelibry_acf_fields_banner(): array {
     return [
+        codelibry_acf_shared_field_anchor_id(),
         [
             'label'        => 'Image',
             'name'         => 'banner-image',

@@ -1,4 +1,5 @@
 <?php
+$anchor_id = get_array_value($args, 'anchor-id', get('anchor-id'));
 $title = get_array_value($args, 'product-tab-title', get('product-tab-title'));
 
 $tabs = [
@@ -12,7 +13,7 @@ $active_tab = isset($_GET['tab']) && array_key_exists($_GET['tab'], $tabs) ? san
 $posts_per_page = 8;
 ?>
 
-<section class="product-tab | section">
+<section class="product-tab | section"<?php echo $anchor_id ? ' id="' . esc_attr($anchor_id) . '"' : ''; ?>>
     <div class="container">
         <div class="product-tab__top">
             <?php if ($title): ?>

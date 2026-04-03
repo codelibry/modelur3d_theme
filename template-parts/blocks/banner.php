@@ -1,4 +1,5 @@
 <?php
+$anchor_id = get_array_value($args, 'anchor-id', get('anchor-id'));
 $text = get_array_value($args, 'banner-text', get('banner-text'));
 $title = get_array_value($args, 'banner-title', get('banner-title'));
 $button   = get_array_value($args, 'banner-button', get('banner-button'));
@@ -16,7 +17,7 @@ if ($image_id) {
 
 ?>
 
-<section class="banner | section">
+<section class="banner | section"<?php echo $anchor_id ? ' id="' . esc_attr($anchor_id) . '"' : ''; ?>>
     <div class="container ">
         <div class="banner__wrapper"<?php echo $bg_style; ?>">
             <div class="banner__content">

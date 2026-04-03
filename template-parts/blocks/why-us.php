@@ -1,10 +1,11 @@
 <?php
 
+$anchor_id = get_array_value($args, 'anchor-id', get('anchor-id'));
 $title    = get_array_value($args, 'why-title', get('why-title'));
 $items    = get_array_value($args, 'why_item', get('why_item'));
 ?>
 
-<section class="why-us | section">
+<section class="why-us | section"<?php echo $anchor_id ? ' id="' . esc_attr($anchor_id) . '"' : ''; ?>>
     <div class="container">
         <div class="why-us__top">
             <?php if ($title) : ?>

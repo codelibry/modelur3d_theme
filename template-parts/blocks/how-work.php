@@ -1,12 +1,13 @@
 <?php
 
+$anchor_id = get_array_value($args, 'anchor-id', get('anchor-id'));
 $title    = get_array_value($args, 'how-title', get('how-title'));
 $main_text = get_array_value($args, 'how-text', get('how-text'));
 $image_id = get_array_value($args, 'how-image', get('how-image'));
 $items    = get_array_value($args, 'how_item', get('how_item'));
 ?>
 
-<section class="how-work | section">
+<section class="how-work | section"<?php echo $anchor_id ? ' id="' . esc_attr($anchor_id) . '"' : ''; ?>>
     <div class="container-sm">
         <div class="how-work__top">
             <?php if ($title) : ?>

@@ -15,6 +15,11 @@ add_action('acf/init', function () {
     }
 });
 
+// Shared fields — auto-load all files in inc/acf/shared-fields/
+foreach (glob(CODELIBRY_THEME_PATH . '/inc/acf/shared-fields/*.php') as $file) {
+    require $file;
+}
+
 // Blocks — auto-load all files in inc/acf/blocks/
 foreach (glob(CODELIBRY_THEME_PATH . '/inc/acf/blocks/*.php') as $file) {
     require $file;

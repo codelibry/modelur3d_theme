@@ -1,8 +1,9 @@
 <?php
+$anchor_id = get_array_value($args, 'anchor-id', get('anchor-id'));
 $users = get_array_value($args, 'users_item', get('users_item'));
 
 if ($users): ?>
-    <section class="users-section | section">
+    <section class="users-section | section"<?php echo $anchor_id ? ' id="' . esc_attr($anchor_id) . '"' : ''; ?>>
         <div class="container">
             <div class="grid" data-columns="2">
 

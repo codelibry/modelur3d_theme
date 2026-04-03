@@ -1,5 +1,6 @@
 <?php
 
+$anchor_id      = get_array_value($args, 'anchor-id', get('anchor-id'));
 $image_position = get_array_value($args, 'image-text-image-position', get('image-text-image-position')) ?: 'left';
 $image          = get_array_value($args, 'image-text-image', get('image-text-image'));
 $text           = get_array_value($args, 'image-text-text', get('image-text-text'));
@@ -10,7 +11,7 @@ if (!$image && !$text) {
 
 ?>
 
-<section class="image-text | section" data-image-position="<?php echo esc_attr($image_position); ?>">
+<section class="image-text | section"<?php echo $anchor_id ? ' id="' . esc_attr($anchor_id) . '"' : ''; ?> data-image-position="<?php echo esc_attr($image_position); ?>">
     <div class="container">
         <div class="image-text__inner">
 

@@ -1,6 +1,7 @@
 <?php
 $args  = $args ?? [];
 
+$anchor_id = get_array_value( $args, 'anchor-id', get( 'anchor-id' ) );
 $title = get_array_value( $args, 'faq-title', get( 'faq-title' ) );
 $items = get_array_value( $args, 'faq_item',  get( 'faq_item' ) );
 
@@ -15,7 +16,7 @@ if ( ! empty( $items ) ) {
 }
 ?>
 
-<section class="faq | section">
+<section class="faq | section"<?php echo $anchor_id ? ' id="' . esc_attr( $anchor_id ) . '"' : ''; ?>>
     <div class="container-sm">
 
         <?php if ( $title ) : ?>
