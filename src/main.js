@@ -8,6 +8,7 @@ import './js/reset-pass';
 import './js/password-toggle';
 import './js/product-tab';
 import './js/accordion';
+import './js/header-scroll';
 import './scss/main.scss';
 
 /*

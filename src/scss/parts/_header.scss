@@ -1,14 +1,19 @@
 .header {
-  --header-spacing: 1rem;
-
-  box-shadow: var(--shadow-base);
-  padding: var(--header-spacing) 0;
-  background: var(--color-bg);
+  --header-spacing: 3rem 0;
+  padding-block: var(--header-spacing);
   color: var(--color-black);
-  position: fixed;
   top: -1px;
   z-index: 100;
   width: 100%;
+  position: relative;
+  transition: var(--transition-base);
+
+  &.header-scroll {
+    --header-spacing: 1rem;
+    position: fixed;
+    background: var(--color-bg);
+    box-shadow: var(--shadow-base);
+  }
 
   .menu {
     display: flex;
@@ -160,12 +165,16 @@
     display: flex;
     align-items: center;
   }
+
   
   @include lg {
+    --header-spacing: 1rem 0;
+
     &__logo {
       justify-content: center;
     }
   }
+
 
   @include sm {
     &__inner {

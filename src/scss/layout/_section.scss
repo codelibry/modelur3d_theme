@@ -2,20 +2,10 @@
   padding: 2.5rem 0;
 }
 
-.section:first-of-type {
-  padding-top: 10rem;
-}
-
 .section-top {
   padding-top: 2.5rem;
 }
 
 .section-bottom {
   padding-bottom: 2.5rem;
-}
-
-@include md {
-  .section:first-of-type {
-    padding-top: 8rem;
-  }
 }
