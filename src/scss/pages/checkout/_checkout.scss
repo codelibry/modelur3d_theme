@@ -48,6 +48,11 @@
 /// Thank you
 .woocommerce-order{
 
+  td, th, .woocommerce-customer-details, tr, li {
+    border-color: var(--color-dark) !important;
+    border-radius: 0 !important;
+  }
+
   .woocommerce-notice {
     color: var(--color-black);
   }

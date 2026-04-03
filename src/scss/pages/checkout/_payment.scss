@@ -14,8 +14,9 @@
 
   .balance {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 12px;
+    line-height: 1;
 
     span {
       font-size: var(--size-md);
@@ -25,6 +26,7 @@
     strong {
       font-size: var(--size-h5);
       font-weight: var(--font-bold);
+      line-height: 0.8;
     }
   }
 
