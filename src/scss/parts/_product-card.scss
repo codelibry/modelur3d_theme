@@ -12,7 +12,7 @@
   }
 
   &__title {
-    margin-bottom: rem(40);
+    margin-bottom: rem(32);
 
     // restrict title lines count
     display: -webkit-box;
@@ -26,6 +26,11 @@
       font-size: var(--size-md);
       font-weight: var(--font-bold);
       text-decoration: none;
+      transition: var(--transition-base);
+
+      &:hover {
+        color: var(--color-dark);
+      }
     }
   }
 
