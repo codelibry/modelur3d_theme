@@ -28,7 +28,7 @@
     font-weight: var(--font-regular);
   }
 
-  .cart-subtotal {
+  .cart-subtotal, .points-totalvalue {
     th, td {
       padding-bottom: rem(30);
       padding-top: rem(40);
@@ -42,6 +42,8 @@
       padding-right: rem(40);
     }
   }
+
+  
 
   .order-total {
     th, td {
@@ -83,7 +85,7 @@
   }
 
   @include md {
-    .cart-subtotal {
+    .cart-subtotal, .points-totalvalue {
       th, td {
         padding-bottom: rem(30);
         padding-top: rem(24);
