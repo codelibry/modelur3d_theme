@@ -4,6 +4,9 @@
     <span class="visually-hidden"><?php esc_html_e('Mobile Menu', 'codelibry') ?></span>
   </button>
 
+  <!-- Logo -->
+  <?php get_template_part('template-parts/header/logo') ?>
+
   <!-- Mobile Menu -->
   <div class="mobile-menu">
     <button class="popup__close" type="button">
