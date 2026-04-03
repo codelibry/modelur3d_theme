@@ -19,6 +19,7 @@ textarea {
   border: none;
   transition: var(--transition-base);
   background: var(--color-white);
+  max-height: 52px;
 
   font-size: var(--size-sm);
   font-weight: var(--font-regular);

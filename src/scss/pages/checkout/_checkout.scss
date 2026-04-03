@@ -7,7 +7,7 @@
     gap: 2rem;
   }
 
-  .woocommerce-page__title {
+  .woocommerce-page__title, .rs_checkout_messages {
     display: none;
   }
 
@@ -48,10 +48,27 @@
 /// Thank you
 .woocommerce-order{
 
+  .woocommerce-notice {
+    color: var(--color-black);
+  }
+
+  .woocommerce-order-overview  {
+    margin-bottom: 1rem;
+  }
+
   h2{
     font-size: var(--size-h4);
+    color: var(--color-black);
     font-weight: var(--font-medium);
     margin-bottom: 16px;
+  }
+
+  .woocommerce-table--order-downloads {
+    width: 100%;
+
+    tr td {
+      text-align: center;
+    }
   }
 
   .woocommerce-order-details {
@@ -112,7 +129,7 @@
     font-size: var(--size-h3);
     font-weight: var(--font-medium);
     line-height: var(--leading-normal);
-    color: var(--color-primary);
+    color: var(--color-black);
     text-align: center;
     padding-top: 0;
     padding-bottom: 52px;
