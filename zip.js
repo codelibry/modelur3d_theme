@@ -1,4 +1,4 @@
-const THEME_NAME = '../codelibry.zip';
+const THEME_NAME = '../modelur3d_theme.zip';
 
 const fs = require('fs');
 const path = require('path');
